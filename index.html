@@ -35,7 +35,7 @@
             <a href="#" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">Contact</a>
           </li>
       </ul> 
-      <div class="flex w-1/4 ">        
+      <div class="flex w-1/4 ">       
         <button type="button" data-te-ripple-init data-te-ripple-color="light" class="inline-block rounded bg-[#051937] px-6 pb-2 pt-2.5 text-xs uppercase font-medium text-white shadow-[0_4px_9px_-4px_#ffffff] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
           Solicitar presupuesto</button>
         <a class="inline-block rounded px-2 pb-2 pt-2.5 text-xs font-medium text-[#051937] hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
@@ -68,40 +68,58 @@
       <div class=" bg-teal-950 h-24"></div>
       <div class=" bg-sky-500 h-24"></div>
   <!-- Footer -->
-  <footer class="footer-1 bg-azulvioleta py-8 sm:py-12 text-center">
-    <div class="text-center flex items-baseline shadow-lg shadow-slate-300">
-      <div>
-        <img src="assets\image\avatar.jpg" class="mx-auto mb-4 w-12 rounded-lg inline-flex" alt="Avatar"/>
-        <h5 class="mb-2 text-xl font-medium leading-tight">Glenda Castro</h5>
-        <p class="text-neutral-500 dark:text-neutral-400">Web designer</p>
-      </div>
-      <div>
-        <img src="assets\image\avatar.jpg" class="mx-auto mb-4 w-12 rounded-lg inline-flex" alt="Avatar"/>
-        <h5 class="mb-2 text-xl font-medium leading-tight">Darien Jerez</h5>
-        <p class="text-neutral-500 dark:text-neutral-400">Graphig designer</p>
-      </div>
-    </div>
-    <ul>
-      <li class="text-bold">Company</li>
+  <footer class="flex px-16 py-8 sm:py-12 items-center bg-slate-950 text-white space-y-2">
+    <table id="avatares" class="text-center mx-24">
+      <tr id="avatar-glenda" class=" h-24">
+          <th><img src="assets\image\avatar.jpg" class="w-12 rounded-full shadow-sm shadow-white" alt="Avatar"/></th>
+          <th class=" pl-3">
+            <p class="mb-2 text-xl font-medium leading-tight">Glenda Castro</p>
+            <p class="text-neutral-500 dark:text-neutral-400">Web designer</p>
+          </th>
+      </tr>
+      <tr id="avatar-darien" class=" pb-3">
+          <th><img src="assets\image\avatar.jpg" class="w-12 rounded-full shadow-lg" alt="Avatar"/></th>
+          <th class=" pl-3">
+            <p class="mb-2 text-xl font-medium leading-tight">Darien Jerez</p>
+            <p class="text-neutral-500 dark:text-neutral-400">Graphig designer</p>
+          </th>        
+      </tr>
+    </table>
+
+    <ul class="mx-24 space-y-2">
+      <li class="text-bold">LUCA-GD</li>
       <li><a href="#">About us</a></li>
       <li><a href="#">Equipo</a></li>
-      <li><a href="#">Educacion-carrera</a></li>
-
+      <li><a href="#">Filosofia</a></li>
+      <li><a href="assets\publico\Condiciones-de-uso.html">Condisiones de uso</a></li>
+      <li><a href="#">Politicas y Cookies</a></li>
+      <li><a href="#">Politicas de privacidad</a></li>
     </ul>
-    <Address>
-      <li class="text-bold">Contacto</li>
+    <Address class=" list-none mx-24 space-y-2">
+      <li class="text-bold no-underline">Contacto</li>
       <li>Ciudad Habana. Cuba</li>
-      <li></li>
+      <li>corporativo@gmail.com</li>
+      <li>Telf: +53 54706856</li>
+      <li>Horario de Atencion:</li>
+      <li>Lun-Dom 08.00-19.00h</li>
     </Address>
-      
-
-    <div class="container mx-auto">
-      <p>©         
-        <script>document.write(new Date().getFullYear())</script> <!-- este script mantiene el ano actualizado -->
-        Todos los derechos reservados. 
-      </p>
-    </div>
+    <ul class="mx-24 space-y-2">
+      <li><a href="#">Diseño web</a></li>
+      <li><a href="#">Desarrollo Web</a></li>
+      <li><a href="#">Hosting y Alojamiento web</a></li>
+      <li><a href="#">Identidad Digital</a></li>
+      <li><a href="#">Ilustraciones</a></li>
+      <li><a href="#">Animaciones</a></li>
+      <li><a href="#">Conseguir proyectos</a></li>
+    </ul>
   </footer>
+  <div class="w-full bg-slate-950 text-white text-center pb-9">
+    <p> 
+      Todos los derechos reservados ©          
+      <script>document.write(new Date().getFullYear())</script> <!-- este script mantiene el ano actualizado -->
+      LUCA-GD
+    </p>
+  </div>
 
 <!--se carga las librerias de jquery previamente descargadas de su pagina oficial y pegada en la carpeta del documento, despues script que cambia de color el menu-->
 <script>

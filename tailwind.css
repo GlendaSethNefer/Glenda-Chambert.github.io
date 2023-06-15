@@ -13,9 +13,9 @@
     background-image: linear-gradient(to right, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);    
 }
 .bg-verdeazul {
-    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12) !important;
     color: white !important;
-    transition: all 0.5s ease;
+    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12) !important;
+    transition: all 1s ease !important;
 }
 .bg-azulvioleta {
     background-image: linear-gradient(to right top, #04a0c0, #329fd0, #5c9bdb, #8596de, #aa8fd8);

@@ -8,5 +8,8 @@
   "scripts": {
     "build": "postcss ./tailwind.css -o ./assets/css/style.css",
     "watch": "postcss ./tailwind.css -o ./assets/css/style.css --watch"
+  },
+  "dependencies": {
+    "tw-elements": "^1.0.0-beta2"
   }
 }
