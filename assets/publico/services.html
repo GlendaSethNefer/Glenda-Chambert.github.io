@@ -3,10 +3,44 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Glenda Castro </title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title> Desarrollo Web Glenda Castro - Darien Jerez </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../../code.jquery.com_jquery-3.7.0.js"></script>
+    <script
+      type="text/javascript"
+      src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js">
+    </script>
 </head>
 <body>
+  <header class="pb-24">
+    <nav class="flex items-center justify-between px-24 h-24 fixed-top bg-transparent" id="menu">
+      <div class="grid items-center w-1/3 sd:hidden">
+        <a href="../../index.html" class="font-extrabold text-xl tracking-tight ">Glenda Castro / Darien Jerez</a>
+        <span class=" font-light text-xl tracking-tight ">Diseno Web / Diseno Grafico</span>
+      </div>
+      <!--menu cabecera-->
+      <ul class="flex menu md:border-none justify-center list-reset m-0 w-full md:w-auto">
+          <li class="md:border-none">
+            <a href="assets\publico\services.html" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-bold">Servicios</a>
+          </li>
+          <li class="md:border-none">
+            <a href="#" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">About us</a>
+          </li>
+          <li class="md:border-none">
+            <a href="assets\publico\services.html" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">Recursos</a>
+          </li>
+          <li class="md:border-none">
+            <a href="#" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">Contact</a>
+          </li>
+      </ul> 
+      <div class="flex w-1/4 ">       
+        <button type="button" data-te-ripple-init data-te-ripple-color="light" class="inline-block rounded bg-[#051937] px-6 pb-2 pt-2.5 text-xs uppercase font-medium text-white shadow-[0_4px_9px_-4px_#ffffff] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+          Solicitar presupuesto</button>
+        <a class="inline-block rounded px-2 pb-2 pt-2.5 text-xs font-medium text-[#051937] hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
+          Siguenos en</a><!--esto es un menu para las redes sociales-->
+      </div>
+    </nav>  
+  </header>
   
 <div class="container ml-auto mr-auto flex flex-wrap items-start mt-8">
     <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
@@ -101,6 +135,80 @@
       </div>
     </div>
 </div>
+
+ <!-- Footer -->
+ <footer class="flex px-16 py-8 sm:py-12 items-center bg-slate-950 text-white space-y-2">
+  <table id="avatares" class="text-center mx-24">
+    <tr id="avatar-glenda" class=" h-24">
+        <th><img src="assets\image\avatar.jpg" class="w-12 rounded-full shadow-sm shadow-white" alt="Avatar"/></th>
+        <th class=" pl-3">
+          <p class="mb-2 text-xl font-medium leading-tight">Glenda Castro</p>
+          <p class="text-neutral-500 dark:text-neutral-400">Web designer</p>
+        </th>
+    </tr>
+    <tr id="avatar-darien" class=" pb-3">
+        <th><img src="assets\image\avatar.jpg" class="w-12 rounded-full shadow-lg" alt="Avatar"/></th>
+        <th class=" pl-3">
+          <p class="mb-2 text-xl font-medium leading-tight">Darien Jerez</p>
+          <p class="text-neutral-500 dark:text-neutral-400">Graphig designer</p>
+        </th>        
+    </tr>
+  </table>
+
+  <ul class="mx-24 space-y-2">
+    <li class="text-bold">LUCA-GD</li>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Equipo</a></li>
+    <li><a href="#">Filosofia</a></li>
+    <li><a href="./Condiciones-de-uso.html">Condisiones de uso</a></li>
+    <li><a href="#">Politicas y Cookies</a></li>
+    <li><a href="#">Politicas de privacidad</a></li>
+  </ul>
+  <Address class=" list-none mx-24 space-y-2">
+    <li class="text-bold no-underline">Contacto</li>
+    <li>Ciudad Habana. Cuba</li>
+    <li>corporativo@gmail.com</li>
+    <li>Telf: +53 54706856</li>
+    <li>Horario de Atencion:</li>
+    <li>Lun-Dom 08.00-19.00h</li>
+  </Address>
+  <ul class="mx-24 space-y-2">
+    <li><a href="#">Diseño web</a></li>
+    <li><a href="#">Desarrollo Web</a></li>
+    <li><a href="#">Hosting y Alojamiento web</a></li>
+    <li><a href="#">Identidad Digital</a></li>
+    <li><a href="#">Ilustraciones</a></li>
+    <li><a href="#">Animaciones</a></li>
+    <li><a href="#">Conseguir proyectos</a></li>
+  </ul>
+</footer>
+<div class="w-full bg-slate-950 text-white text-center pb-9">
+  <p> 
+    Todos los derechos reservados ©          
+    <script>document.write(new Date().getFullYear())</script> <!-- este script mantiene el ano actualizado -->
+    LUCA-GD
+  </p>
+</div>
+
+<!--se carga las librerias de jquery previamente descargadas de su pagina oficial y pegada en la carpeta del documento, despues script que cambia de color el menu-->
+<script>
+$(Window).scroll(function(){
+    if ($("#menu").offset().top > 65) {
+        $("#menu").addClass("bg-verdeazul");
+    } else {
+      $("#menu").removeClass("bg-verdeazul");
+    }
+  });
+</script>
+<script>
+// Initialization for ES Users
+import {
+Ripple,
+initTE,
+} from "tw-elements";
+
+initTE({ Ripple });
+</script>
 
 </body>
 </html>

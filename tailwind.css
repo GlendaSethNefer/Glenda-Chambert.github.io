@@ -14,7 +14,12 @@
 }
 .bg-verdeazul {
     color: white !important;
-    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #a8eb12) !important;
+    background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #94d30b) !important;
+    transition: all 1s ease !important;
+}
+.bg-azulverde {
+    color: white !important;
+    background-image: linear-gradient(to left, #051937, #004d7a, #008793, #00bf72, #94d30b) !important;
     transition: all 1s ease !important;
 }
 .bg-azulvioleta {
@@ -23,8 +28,30 @@
 .bg-color {
     --tw-bg-opacity: 1;
     background-color: rgb(30 27 75 / var(--tw-bg-opacity)) !important;
-    color: aliceblue !important;
+    color: rgb(255, 158, 250) !important;
 }
 .bg-transparent{
     transition: all 1s ease;
 }
+
+.span {
+position: absolute;
+background: #fff;
+transform: translate(-50%, -50%);
+pointer-events: none;
+border-radius: 50%;
+animation: ani 1s linear infinite;
+}
+@keyframes ani {
+    0% {
+        width: 0px;
+        height: 0px;
+        opacity: 0.s;
+    }
+    100% {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+

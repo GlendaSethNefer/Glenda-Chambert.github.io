@@ -10,6 +10,7 @@
     "watch": "postcss ./tailwind.css -o ./assets/css/style.css --watch"
   },
   "dependencies": {
+    "bootstrap": "^5.3.0",
     "tw-elements": "^1.0.0-beta2"
   }
 }

@@ -8,119 +8,289 @@
     <script src="./code.jquery.com_jquery-3.7.0.js"></script>
     <!--aqui se debe instalar el plugins de tailwind Element para el css tocao, 
       revisar esta pagina para hacerlo https://tailwind-elements.com/docs/standard/getting-started/quick-start/-->
-    <script
-      type="text/javascript"
-      src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js">
-    </script>
+    <script type="text/javascript" src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 </head>
-<body class=" bg-slate-50">
-  <header class=" pb-24">
-    <nav class="flex items-center justify-between px-24 h-24 fixed-top bg-transparent" id="menu">
-      <div class="grid items-center w-1/3 sd:hidden">
-        <a href="index.html" class="font-extrabold text-xl tracking-tight ">Glenda Castro / Darien Jerez</a>
-        <span class=" font-light text-xl tracking-tight ">Diseno Web / Diseno Grafico</span>
+<body class="bg-slate-50 block">  
+  <nav class="shadow-lg flex items-center justify-between px-24 h-24 fixed-top bg-transparent" id="menu">
+    <div class="grid items-center w-1/3 sd:hidden">
+      <a href="index.html" class="font-extrabold text-xl tracking-tight ">Glenda Castro / Darien Jerez</a>
+      <span class=" font-light text-xl tracking-tight ">Diseno Web / Diseno Grafico</span>
+    </div>
+    <!--menu cabecera-->
+    <ul class="flex menu md:border-none justify-center list-reset m-0 w-full md:w-auto">
+        <li class="md:border-none">
+          <a href="assets\publico\services.html" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-bold">Servicios</a>
+        </li>
+        <li class="md:border-none">
+          <a href="#" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">About us</a>
+        </li>
+        <li class="md:border-none">
+          <a href="assets\publico\services.html" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">Recursos</a>
+        </li>
+        <a class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">Siguenos en</a><!--esto es un menu para las redes sociales-->
+    </ul> 
+    <div class="flex">       
+      <button id="button" href="#" style="overflow:hidden" class="inline-block rounded bg-slate-950 px-4 py-2 text-xs uppercase font-medium text-white shadow-[0_4px_9px_-4px_#ffffff]">
+        Solicitar presupuesto</button> 
+      <script>
+        const button = document.getElementById('button');
+        button.forEach(btn => {
+          btn.addEventListener('click', function(e) {
+            let x = e.clientx - e.target.offsetLeft;
+            let y = e.clienty - e.target.offsetTop;
+            let ripples = document.createElement('span');
+            ripples.style.left = x + 'px';
+            ripples.style.top = y + 'px';
+            this.appendChild(ripples);
+            setTimeout(() => {
+              ripples.remove();
+            }, 1000);
+          });
+        });
+      </script>    
+    </div>
+  </nav>  
+  <header>  
+  <!-- Portfolio Section -->
+  <section class="container mx-auto my-2">       
+    <div class="pb-7 pt-48 px-40 inline-flex items-center">
+      <div class=" w-80">
+        <span class="px-1 text-right text-2xl text-white font-bold box-decoration-slice bg-degradado">
+          &nbsp;Desarrolla tu imagen&nbsp; <br/>
+          &nbsp;junto a nosotros!!!&nbsp; </span>
       </div>
-      <!--menu cabecera-->
-      <ul class="flex menu md:border-none justify-center list-reset m-0 w-full md:w-auto">
-          <li class="md:border-none">
-            <a href="index.html" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker font-bold">Servicios</a>
-          </li>
-          <li class="md:border-none">
-            <a href="#" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">About us</a>
-          </li>
-          <li class="md:border-none">
-            <a href="services.html" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">Recursos</a>
-          </li>
-          <li class="md:border-none">
-            <a href="#" class="block md:inline-block px-4 py-3 no-underline text-grey-darkest hover:text-grey-darker">Contact</a>
-          </li>
-      </ul> 
-      <div class="flex w-1/4 ">       
-        <button type="button" data-te-ripple-init data-te-ripple-color="light" class="inline-block rounded bg-[#051937] px-6 pb-2 pt-2.5 text-xs uppercase font-medium text-white shadow-[0_4px_9px_-4px_#ffffff] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-          Solicitar presupuesto</button>
-        <a class="inline-block rounded px-2 pb-2 pt-2.5 text-xs font-medium text-[#051937] hover:text-primary-600 focus:text-primary-600 focus:outline-none focus:ring-0 active:text-primary-700">
-          Siguenos en</a><!--esto es un menu para las redes sociales-->
+      <div class=" w-[40rem]">
+        <p class="text-sm font-serif py-2 text-left">
+          Juntos estudiaremos tu proyecto y crearemos un producto personalizado. Estos son algunos ejemplos populares, pero estamos seguros de que podemos ayudarte a llevar a cabo tu idea. <br/>
+          Confía en nuestra experiencia y tecnologia.
+        </p>
       </div>
-    </nav>  
+    </div>    
+    <!--Tabs navigation-->
+    <ul class="mb-4 flex list-none flex-row flex-wrap border-b-0" id="tabs-tab3" role="tablist" data-te-nav-ref>
+    <li role="presentation">
+      <a href="#tabs-home3" class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+        id="tabs-home-tab3" data-te-toggle="pill" data-te-target="#tabs-home3" data-te-nav-active role="tab" aria-controls="tabs-home3" aria-selected="true"
+        >Home</a>
+    </li>
+    <li role="presentation">
+      <a href="#tabs-profile3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+        id="tabs-profile-tab3" data-te-toggle="pill" data-te-target="#tabs-profile3" role="tab" aria-controls="tabs-profile3" aria-selected="false"
+        >Profile</a>
+    </li>
+    <li role="presentation">
+      <a href="#tabs-messages3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+        id="tabs-messages-tab3" data-te-toggle="pill" data-te-target="#tabs-messages3" role="tab" aria-controls="tabs-messages3" aria-selected="false"
+        >Messages</a>
+    </li>
+    </ul>
+    <!--Tabs content-->
+  <section>
+    <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+      id="tabs-home3" role="tabpanel" data-te-tab-active aria-labelledby="tabs-home-tab3">
+      <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
+        <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+            </div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+            </div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+            </div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
+            </div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp" />
+            </div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+            </div>
+          </div>
+        </div>
+      </div>
+      Tab 1 content button version
+    </div>
+    <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+      id="tabs-profile3" role="tabpanel" aria-labelledby="tabs-profile-tab3">
+      Tab 2 content button version
+    </div>
+    <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+      id="tabs-messages3" role="tabpanel" aria-labelledby="tabs-profile-tab3">
+      Tab 3 content button version
+    </div>
+  </section> 
+
+  <section class="text-center container mx-auto my-2">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
+              <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-primary">5000+</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50">Components</h6>
+        <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
+      </div>
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
+              <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
+              <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
+              <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-primary">490+</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50">Design blocks</h6>
+        <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
+      </div>
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
+              <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-primary">100+</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50">Templates</h6>
+        <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
+      </div>
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
+              <path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 000 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 000-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 00-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-primary">28</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50">Plugins</h6>
+      </div>
+    </div>
+  </section>
+
+  <!--boton de burbujas rosa-->
+  <section>
+    <button class="bubbly-button">Click me!</button>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+    <script>
+      var animateButton = function(e) {
+
+        e.preventDefault;
+        //reset animation
+        e.target.classList.remove('animate');
+        
+        e.target.classList.add('animate');
+        setTimeout(function(){
+          e.target.classList.remove('animate');
+        },700);
+      };
+      
+      var bubblyButtons = document.getElementsByClassName("bubbly-button");
+      
+      for (var i = 0; i < bubblyButtons.length; i++) {
+        bubblyButtons[i].addEventListener('click', animateButton, false);
+      }
+    </script>
+  </section>
+  <!-- End of portfolio section -->
   </header>
-      <!--cuerpo de la pagina-->
-      <!--Seccion de llamada a la accion-->
-      <div class="items-center grid grid-cols-2 pt-48">
-        <div class="text-center">
-          <h1 class="text-3xl font-bold underline">Desarrolla tu imagen junto a profesionles!!</h1>
-          <p class=" text-center text-sm font-serif">
-            Juntos estudiaremos tu proyecto y crearemos un producto personalizado. Estos son algunos ejemplos populares,
-            pero estamos seguros de que podemos ayudarte a llevar a cabo tu idea. Confía en nuestra experiencia y tecnologia.
-          </p>
-          <a href="#" class=" uppercase text-center border-b inline-block">Portafolio</a>
-        </div>
-        <div>
-          <img src="./assets/image/avatar.jpg" class="w-96 text-left">
-        </div>
-      </div> 
-      <!-- casilla de marcar, esta oculta -->
-      <div class="container mt-48"> 
-        <input class="menu-btn hidden" type="checkbox" id="menu-btn">
-        <label class="menu-icon hidden block cursor-pointer px-2 py-4 relative select-none" for="menu-btn">
-          <span class="navicon bg-grey-darkest flex items-center relative"></span>
-        </label>
-      </div>
-      <div class=" bg-teal-950 h-24"></div>
-      <div class=" bg-sky-500 h-24"></div>
+
   <!-- Footer -->
   <footer class="flex px-16 py-8 sm:py-12 items-center bg-slate-950 text-white space-y-2">
-    <table id="avatares" class="text-center mx-24">
-      <tr id="avatar-glenda" class=" h-24">
-          <th><img src="assets\image\avatar.jpg" class="w-12 rounded-full shadow-sm shadow-white" alt="Avatar"/></th>
-          <th class=" pl-3">
-            <p class="mb-2 text-xl font-medium leading-tight">Glenda Castro</p>
-            <p class="text-neutral-500 dark:text-neutral-400">Web designer</p>
-          </th>
-      </tr>
-      <tr id="avatar-darien" class=" pb-3">
-          <th><img src="assets\image\avatar.jpg" class="w-12 rounded-full shadow-lg" alt="Avatar"/></th>
-          <th class=" pl-3">
-            <p class="mb-2 text-xl font-medium leading-tight">Darien Jerez</p>
-            <p class="text-neutral-500 dark:text-neutral-400">Graphig designer</p>
-          </th>        
-      </tr>
-    </table>
+      <div class="mx-24">
+        <div class="overflow-hidden relative h-20 w-60 mb-3 max-w-sm mx-auto bg-azulvioleta shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar.jpg">
+          <div class="flex flex-col py-5 pl-24">
+            <strong class=" text-sm font-medium dark:text-slate-200">Glenda Remigio</strong>
+            <span class="text-slate-200 text-sm font-medium dark:text-slate-400">Web Developer</span>
+          </div>
+        </div>
+        <div class="overflow-hidden relative h-20 w-60 max-w-sm mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80">
+          <div class="flex flex-col py-5 pl-24">
+            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Darien Jerez</strong>
+            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Graphic Designer</span>
+          </div>
+        </div>
+      </div>
+      <!-- Contact section -->
+      <div class=" list-none mx-24 space-y-2">
+        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start"> 
+          Contact </h6>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
+            <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+            <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+          </svg>
+          Ciudad Habana, ch 10400, Cuba
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
+            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+          corporativo@gmail.com
+        </p>
+        <p class="mb-4 flex items-center justify-center md:justify-start">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+              clip-rule="evenodd" />
+          </svg>
+          + 01 234 567 89
+        </p>
+        <p class="flex items-center justify-center md:justify-start">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
+            <path fill-rule="evenodd" d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+              clip-rule="evenodd" />
+          </svg>
+          + 01 234 567 89
+        </p>
+      </div>
 
-    <ul class="mx-24 space-y-2">
-      <li class="text-bold">LUCA-GD</li>
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Equipo</a></li>
-      <li><a href="#">Filosofia</a></li>
+      <ul class="mx-24 space-y-2">
+        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start"> Product </h6>
+        <li><a href="#">Diseño web</a></li>
+        <li><a href="#">Desarrollo Web</a></li>
+        <li><a href="#">Ilustraciones</a></li>
+        <li><a href="#">Animaciones</a></li>
+        <li><a href="#">Conseguir proyectos</a></li>
+      </ul>
+  </footer>
+  <div class="w-full bg-slate-950 text-white text-center pb-9">
+    <ul class="flex justify-evenly px-80">
       <li><a href="assets\publico\Condiciones-de-uso.html">Condisiones de uso</a></li>
       <li><a href="#">Politicas y Cookies</a></li>
       <li><a href="#">Politicas de privacidad</a></li>
     </ul>
-    <Address class=" list-none mx-24 space-y-2">
-      <li class="text-bold no-underline">Contacto</li>
-      <li>Ciudad Habana. Cuba</li>
-      <li>corporativo@gmail.com</li>
-      <li>Telf: +53 54706856</li>
-      <li>Horario de Atencion:</li>
-      <li>Lun-Dom 08.00-19.00h</li>
-    </Address>
-    <ul class="mx-24 space-y-2">
-      <li><a href="#">Diseño web</a></li>
-      <li><a href="#">Desarrollo Web</a></li>
-      <li><a href="#">Hosting y Alojamiento web</a></li>
-      <li><a href="#">Identidad Digital</a></li>
-      <li><a href="#">Ilustraciones</a></li>
-      <li><a href="#">Animaciones</a></li>
-      <li><a href="#">Conseguir proyectos</a></li>
-    </ul>
-  </footer>
-  <div class="w-full bg-slate-950 text-white text-center pb-9">
     <p> 
       Todos los derechos reservados ©          
       <script>document.write(new Date().getFullYear())</script> <!-- este script mantiene el ano actualizado -->
       LUCA-GD
     </p>
   </div>
-
+  
 <!--se carga las librerias de jquery previamente descargadas de su pagina oficial y pegada en la carpeta del documento, despues script que cambia de color el menu-->
 <script>
   $(Window).scroll(function(){
@@ -131,15 +301,5 @@
       }
     });
 </script>
-<script>
-  // Initialization for ES Users
-import {
-  Ripple,
-  initTE,
-} from "tw-elements";
-
-initTE({ Ripple });
-</script>
-
 </body>
 </html>
