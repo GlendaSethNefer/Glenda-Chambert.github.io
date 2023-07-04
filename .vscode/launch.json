@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open services.html",
-            "file": "d:\\GLENDA\\Glenda-Chambert.github.io\\assets\\publico\\services.html"
+            "file": "d:\\GLENDA\\Glenda-Chambert.github.io\\index.html"
         }
     ]
 }
