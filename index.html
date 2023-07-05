@@ -4,58 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Desarrollo Web Glenda Castro - Darien Jerez </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fasthand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="./code.jquery.com_jquery-3.7.0.js"></script>
-    <!--aqui se debe instalar el plugins de tailwind Element para el css tocao, 
-      revisar esta pagina para hacerlo https://tailwind-elements.com/docs/standard/getting-started/quick-start/-->
-    <script type="text/javascript" src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="script.js"></script>
 </head>
-<body class="bg-slate-100 mx-auto mt-5">
-  <!-- cabecera -->  
-  <nav id="navbar" class="flex shadow-lg items-center lg:justify-between px-10 lg:px-24 h-24 fixed-top bg-[#00bf72]">
-    <!--icono y nombre-->
-    <div class="flex items-center flex-shrink-0"> 
-      <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
-      <a href="index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">Glenda Castro <br/> Darien Jerez</a>
-    </div> 
-    <!--menu cabecera-->
-    <div id="menu" class="w-full flex-grow lg:flex lg:items-center lg:auto text-center pl-40 hidden">
-      <div class="text-sm lg:flex-grow">
-        <a href="index.html" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4 font-bold">Home</a>
-        <a href="#" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">About Us</a>
-        <a href="#" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">Recursos</a>
-        <a href="#" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">Siguenos en</a>
-        <a href="prubas.html" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">Pag Pruebas</a>
+<body class="bg-slate-200">  
+    <nav id="navbar" class="fixed-top bg-white p-5 shadow md:flex md:items-center md:justify-between">
+      <span class="flex items-center flex-shrink-0 ml-12"> 
+        <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
+        <a href="index.html" class="visible font-extrabold text-xl text-[#d16ba5] tracking-tight pl-8 max-sm:hidden cursor-pointer">Glenda Castro <br/> Darien Jerez</a>
+      </span>
       </div>
-      <div class="text-sm lg:flex-grow pr-12 pt-3 xl:pt-0">       
-        <button id="btn" href="#" class="inline-block rounded bg-[#051937] hover:bg-[#004d7a] text-white hover:text-purple-200 px-4 py-2 text-xs uppercase font-medium shadow-[0_4px_9px_-4px_#ffffff]">
-        Solicitar presupuesto</button>     
-      </div>    
-    </div> 
-    <!-- boton de responsive-->
-    <div class="flex lg:hidden xl:hidden 2xl:hidden pl-48">
-      <button id="btnmenu" class=" flex items-center px-3 py-2 bg-slate-950 text-teal-200">
-        <svg class=" fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
-    </div> 
-  </nav>  
+      <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 m:w-auto md:py-0 pt-7 md:opacity-100 opacity-0 top-[-400px] md:pl-96 pl-7 transition-all ease-in duration-500" id="menu">
+        <li class="mx-4 my-6 md:my-0"><a href="index.html" class="text-base hover:text-teal-800 duration-500">Home</a></li>
+        <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800 duration-500">About Us</a></li>
+        <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800 duration-500">Recursos</a></li>
+        <li class="mx-4 my-6 md:my-0"><a href="prubas.html" class="text-base hover:text-teal-800 duration-500">Pruebas</a></li>
+        <li class="mx-4 my-6 md:my-0 contents" data-te-nav-item-ref data-te-dropdown-ref>
+          <a href="#" class="text-base hover:text-teal-800 duration-500 flex items-center" 
+            type="button" id="dropdownMenuButton2" data-te-dropdown-toggle-ref aria-expanded="false">Siguenos en
+              <span class="ml-1 w-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+          </a>
+          <ul  class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+            aria-labelledby="dropdownMenuButton2" data-te-dropdown-menu-ref>
+            <li>
+              <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                href="#" data-te-dropdown-item-ref>Action</a>
+            </li>
+            <li>
+              <a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                href="#" data-te-dropdown-item-ref >Another action</a>
+            </li>
+            <li>
+              <a
+                class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                href="#"
+                data-te-dropdown-item-ref
+                >Something else here</a
+              >
+            </li>
+        </ul>
+        </li>
+        <button id="btn" href="#" type="button" data-te-ripple-init data-te-ripple-color="light"
+          class="rounded bg-teal-800 hover:bg-teal-950 text-white px-4 py-2 ml-96 text-xs uppercase font-medium shadow-[0_4px_9px_-4px_#ffffff]">
+            Solicitar presupuesto
+        </button>
+      </ul> 
+    </nav>  
   <!-- cuerpo pagina -->
   <header>  
     <!-- Portfolio Section -->
     <section class="container mx-auto my-2">       
-      <div class="pb-7 pt-48 px-40 inline-flex items-center">
-        <div class=" w-80">
+      <div class="pb-7 pt-48 block items-center md:flex md:text-center">
+        <div class="w-80">
           <span class="px-1 text-right text-2xl text-white font-bold box-decoration-slice bg-degradado">
             &nbsp;Desarrolla tu imagen&nbsp; <br/>
             &nbsp;junto a nosotros!!!&nbsp; </span>
         </div>
-        <div class=" w-[40rem]">
+        <div class=" lg:w-[40rem] flex">
           <p class="text-sm font-serif py-2 text-left">
             Juntos estudiaremos tu proyecto y crearemos un producto personalizado. Estos son algunos ejemplos populares, 
             pero estamos seguros de que podemos ayudarte a llevar a cabo tu idea. <br/>
@@ -64,22 +75,22 @@
         </div>
       </div>    
       <!--Tabs navigation-->
-      <section></section>
-      <ul class="mb-4 flex list-none flex-row flex-wrap border-b-0" id="tabs-tab3" role="tablist" data-te-nav-ref>
+      <section class="">
+      <ul class="flex list-none flex-row flex-wrap border-b-0" id="tabs-tab3" role="tablist" data-te-nav-ref>
       <li role="presentation">
         <a href="#tabs-home3" class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
           id="tabs-home-tab3" data-te-toggle="pill" data-te-target="#tabs-home3" data-te-nav-active role="tab" aria-controls="tabs-home3" aria-selected="true"
-          >Home</a>
+          >Diseno Personajes</a>
       </li>
       <li role="presentation">
         <a href="#tabs-profile3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
           id="tabs-profile-tab3" data-te-toggle="pill" data-te-target="#tabs-profile3" role="tab" aria-controls="tabs-profile3" aria-selected="false"
-          >Profile</a>
+          >Fondo</a>
       </li>
       <li role="presentation">
         <a href="#tabs-messages3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
           id="tabs-messages-tab3" data-te-toggle="pill" data-te-target="#tabs-messages3" role="tab" aria-controls="tabs-messages3" aria-selected="false"
-          >Messages</a>
+          >Web</a>
       </li>
       </ul>
     </section>
@@ -340,6 +351,10 @@
     </a>
   </div>
 </footer>
-<script src="script.js"></script>
+<script
+  type="text/javascript"
+  src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js">  
+</script>
+
 </body>
 </html>
