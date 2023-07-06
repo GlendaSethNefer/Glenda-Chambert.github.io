@@ -15,7 +15,7 @@
 .bg-verdeazul {
     color: white !important;
     background-image: linear-gradient(to right, #051937, #004d7a, #008793, #00bf72, #94d30b) !important;
-    transition: all 1s ease !important;
+    transition: all 0s ease !important;
 }
 .bg-inverso {
     color: white !important;
