@@ -6,6 +6,14 @@ module.exports = {
     fontFamily: {
       sans: ['Balsamiq Sans', 'sans-serif'],
       serif: ['Marhey', 'serif'],
+      gochi: ['Gochi Hand'],
+      alegreya: ['Alegreya Sans'],
+      explora: ['Explora'],
+      gentium: ['Gentium Book Plus', 'Gentium Plus'],
+      lato: ['Lato'],
+      lora: ['Lora'],
+      playfair: ['Playfair Display'],
+      raleway: ['Raleway'],
     },
   },
 
