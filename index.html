@@ -4,253 +4,444 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Desarrollo Web Glenda Castro - Darien Jerez </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fasthand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="./code.jquery.com_jquery-3.7.0.js"></script>
-    <!--aqui se debe instalar el plugins de tailwind Element para el css tocao, 
-      revisar esta pagina para hacerlo https://tailwind-elements.com/docs/standard/getting-started/quick-start/-->
-    <script type="text/javascript" src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="script.js"></script>
 </head>
-<body class="bg-slate-100 mx-auto mt-5">
-  <!-- cabecera -->  
-  <nav id="navbar" class="flex shadow-lg items-center lg:justify-between px-10 lg:px-24 h-24 fixed-top bg-[#00bf72]">
-    <!--icono y nombre-->
-    <div class="flex items-center flex-shrink-0"> 
-      <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
-      <a href="index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">Glenda Castro <br/> Darien Jerez</a>
-    </div> 
-    <!--menu cabecera-->
-    <div id="menu" class="w-full flex-grow lg:flex lg:items-center lg:auto text-center pl-40 hidden">
-      <div class="text-sm lg:flex-grow">
-        <a href="index.html" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4 font-bold">Home</a>
-        <a href="#" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">About Us</a>
-        <a href="#" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">Recursos</a>
-        <a href="#" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">Siguenos en</a>
-        <a href="prubas.html" class=" mt-4 inline-block lg:mt-0 hover:text-purple-200 mr-4">Pag Pruebas</a>
+<body class="bg-slate-200 font-lato">  
+    <nav id="navbar" class="fixed-top bg-white p-5 shadow md:flex md:items-center md:justify-between">
+      <span class="flex items-center flex-shrink-0"> 
+        <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
+        <a href="index.html" class="visible font-extrabold font-playfair text-2xl text-[#d16ba5] tracking-tight pl-8 max-sm:hidden cursor-pointer">
+          Glenda Castro <br/> Darien Jerez</a>
+      </span>
       </div>
-      <div class="text-sm lg:flex-grow pr-12 pt-3 xl:pt-0">       
-        <button id="btn" href="#" class="inline-block rounded bg-[#051937] hover:bg-[#004d7a] text-white hover:text-purple-200 px-4 py-2 text-xs uppercase font-medium shadow-[0_4px_9px_-4px_#ffffff]">
-        Solicitar presupuesto</button>     
-      </div>    
-    </div> 
-    <!-- boton de responsive-->
-    <div class="flex lg:hidden xl:hidden 2xl:hidden pl-48">
-      <button id="btnmenu" class=" flex items-center px-3 py-2 bg-slate-950 text-teal-200">
-        <svg class=" fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
-    </div> 
-  </nav>  
+      <ul class="md:flex md:items-center z-[-1] md:z-auto md:static font-raleway absolute w-full left-0 md:w-auto md:py-0 pt-7 md:opacity-100 opacity-0 top-[-400px] pl-7 transition-all ease-in duration-500" id="menu">
+        <li class="mx-4 my-6 md:my-0"><a href="./assets/publico/services.html" class="text-base hover:text-teal-800">Servicios</a></li>
+        <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800">About Us</a></li>
+        <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800">Recurso</a></li>
+        <li class="mx-4 my-6 md:my-0 contents" data-te-nav-item-ref data-te-dropdown-ref>
+          <a href="#" class="text-base hover:text-teal-800 flex items-center" 
+            type="button" id="dropdownMenuButton2" data-te-dropdown-toggle-ref aria-expanded="false">Siguenos en
+              <span class="ml-1 w-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
+                </svg>
+              </span>
+          </a>
+          <ul class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white/50 bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
+            aria-labelledby="dropdownMenuButton2" data-te-dropdown-menu-ref>
+            <li><a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                  href="#" data-te-dropdown-item-ref>Action</a></li>
+            <li><a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                  href="#" data-te-dropdown-item-ref >Another action</a></li>
+            <li><a lass="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
+                  href="#" data-te-dropdown-item-ref >Something else here</a ></li>
+        </ul>
+        </li>
+        <button id="btn" href="#" type="button" data-te-ripple-init data-te-ripple-color="light"
+          class="rounded bg-[#ec9dca] px-4 py-2 ml-96 text-xs uppercase font-medium font-lato shadow-[0_4px_9px_-4px_#ffffff]">
+            Solicitar presupuesto
+        </button>
+      </ul> 
+    </nav>  
   <!-- cuerpo pagina -->
-  <header>  
-    <!-- Portfolio Section -->
-    <section class="container mx-auto my-2">       
-      <div class="pb-7 pt-48 px-40 inline-flex items-center">
-        <div class=" w-80">
-          <span class="px-1 text-right text-2xl text-white font-bold box-decoration-slice bg-degradado">
-            &nbsp;Desarrolla tu imagen&nbsp; <br/>
-            &nbsp;junto a nosotros!!!&nbsp; </span>
-        </div>
-        <div class=" w-[40rem]">
-          <p class="text-sm font-serif py-2 text-left">
-            Juntos estudiaremos tu proyecto y crearemos un producto personalizado. Estos son algunos ejemplos populares, 
-            pero estamos seguros de que podemos ayudarte a llevar a cabo tu idea. <br/>
-            Confía en nuestra experiencia y tecnologia.
-          </p>
-        </div>
-      </div>    
-      <!--Tabs navigation-->
-      <section></section>
-      <ul class="mb-4 flex list-none flex-row flex-wrap border-b-0" id="tabs-tab3" role="tablist" data-te-nav-ref>
-      <li role="presentation">
-        <a href="#tabs-home3" class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-          id="tabs-home-tab3" data-te-toggle="pill" data-te-target="#tabs-home3" data-te-nav-active role="tab" aria-controls="tabs-home3" aria-selected="true"
-          >Home</a>
-      </li>
-      <li role="presentation">
-        <a href="#tabs-profile3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-          id="tabs-profile-tab3" data-te-toggle="pill" data-te-target="#tabs-profile3" role="tab" aria-controls="tabs-profile3" aria-selected="false"
-          >Profile</a>
-      </li>
-      <li role="presentation">
-        <a href="#tabs-messages3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-          id="tabs-messages-tab3" data-te-toggle="pill" data-te-target="#tabs-messages3" role="tab" aria-controls="tabs-messages3" aria-selected="false"
-          >Messages</a>
-      </li>
-      </ul>
-    </section>
-    <!--Tabs content-->
-    <section>
-      <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-        id="tabs-home3" role="tabpanel" data-te-tab-active aria-labelledby="tabs-home-tab3">
-        <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-12">
-          <div class="-m-1 flex flex-wrap md:-m-2">
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
-              </div>
-            </div>
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
-              </div>
-            </div>
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
-              </div>
-            </div>
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
-              </div>
-            </div>
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp" />
-              </div>
-            </div>
-            <div class="flex w-1/3 flex-wrap">
-              <div class="w-full p-1 md:p-2">
-                <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
-              </div>
+  <header> 
+  <div class=" h-2"></div>
+  <div class="container mt-24 mx-auto md:px-6">
+    <!-- Section: Design Block -->
+    <section class="mb-24 bg-[#008793] text-center dark:bg-neutral-900 lg:text-left">
+      <div class="px-6 py-12 md:px-12">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div class="mt-12 lg:mt-0">
+            <h1 class="mb-12 text-5xl text-neutral-200 font-bold font-playfair leading-tight tracking-tight">
+              The best offer <br /><span class="text-[#ec9dca]">for your business</span>
+            </h1>
+            <p class="text-neutral-200 font-lato">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+              quibusdam tempora at cupiditate quis eum maiores libero veritatis? Dicta facilis sint aliquid ipsum atque?
+            </p>
+          </div>
+          <div class="mb-12 lg:mb-0">
+            <div class="block rounded-lg bg-white px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-800 md:px-12">
+              <form>
+                <div class="grid md:grid-cols-2 md:gap-6">
+                  <div class="relative mb-6 ring-[#d16ba5]" data-te-input-wrapper-init>
+                    <input type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="exampleFormControlInput1" placeholder="First name" />
+                    <label for="exampleFormControlInput1"
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[#d16ba5] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-[#d16ba5]">First
+                      name
+                    </label>
+                  </div>
+                  <div class="relative mb-6" data-te-input-wrapper-init>
+                    <input type="text"
+                      class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                      id="exampleFormControlInput2" placeholder="Last name" />
+                    <label for="exampleFormControlInput2"
+                      class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[#d16ba5] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-[#d16ba5]">Last
+                      name
+                    </label>
+                  </div>
+                </div>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                  <input type="email"
+                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                    id="exampleFormControlInput3" placeholder="Email address" />
+                  <label for="exampleFormControlInput3"
+                    class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[#d16ba5] peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-[#d16ba5]">Email
+                    address
+                  </label>
+                </div>
+                <div class="relative mb-6" data-te-input-wrapper-init>
+                  <input type="password"
+                    class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                    id="exampleFormControlInput4" placeholder="Password" />
+                  <label for="exampleFormControlInput4"
+                    class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-[#d16ba5]peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-[#d16ba5]">Password
+                  </label>
+                </div>
+                <div class="mb-6 flex min-h-[1.5rem] justify-center pl-[1.5rem]">
+                  <input
+                    class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-[0px_0px_0px_13px_transparent] before:content-[''] checked:border-[#d16ba5] checked:bg-[#d16ba5] checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-[#d16ba5] dark:checked:bg-[#d16ba5] dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                    type="checkbox" value="" id="flexCheckChecked" checked />
+                  <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="flexCheckChecked">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+                <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                  class="mb-6 inline-block w-full rounded bg-[#ec9dca] px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#d16ba5] transition duration-150 ease-in-out hover:bg-[#d16ba5]">
+                  Sign up
+                </button>
+                <div class="text-center">
+                  <p class="mb-6">or sign up with:</p>
+                </div>
+                <div class="flex justify-center">
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 dark:action:text-primary-600 text-[#d16ba5] transition duration-200 ease-in-out hover:text-[#d16ba5]  dark:text-[#e5a5c9] dark:hover:text-[#d16ba5] dark:focus:text-[#d16ba5]">
+                    <!-- Facebook -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path fill="#d16ba5"
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 dark:action:text-primary-600 text-[#d16ba5] transition duration-200 ease-in-out dark:text-[#f085c1] dark:hover:text-[#f085c1] dark:focus:text-[#f085c1]">
+                    <!-- Google -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                        <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path fill="#d16ba5"
+                          d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 dark:action:text-primary-600 text-[#d16ba5] transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
+                    <!-- Twitter -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path fill="#d16ba5"
+                          d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                      </svg>
+                    </span>
+                  </a>
+                  <a href="#!" role="button"
+                    class="action:text-primary-700 dark:action:text-primary-600 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
+                    <!-- Github -->
+                    <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                        <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                        <path fill="#d16ba5"
+                          d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </form>
             </div>
           </div>
-        </div>
-        Tab 1 content button version
-      </div>
-      <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-        id="tabs-profile3" role="tabpanel" aria-labelledby="tabs-profile-tab3">
-        Tab 2 content button version
-      </div>
-      <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-        id="tabs-messages3" role="tabpanel" aria-labelledby="tabs-profile-tab3">
-        Tab 3 content button version
-      </div>
-    </section> 
-
-    <section class="text-center container mx-auto my-2">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div class="relative mb-12 px-3 lg:mb-0">
-          <div class="mb-2 flex justify-center">
-            <span class="text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
-                <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
-              </svg>
-            </span>
-          </div>
-          <h5 class="mb-6 font-bold text-primary">5000+</h5>
-          <h6 class="mb-0 font-normal dark:text-neutral-50">Components</h6>
-          <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
-        </div>
-        <div class="relative mb-12 px-3 lg:mb-0">
-          <div class="mb-2 flex justify-center">
-            <span class="text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
-                <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
-                <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
-                <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
-              </svg>
-            </span>
-          </div>
-          <h5 class="mb-6 font-bold text-primary">490+</h5>
-          <h6 class="mb-0 font-normal dark:text-neutral-50">Design blocks</h6>
-          <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
-        </div>
-        <div class="relative mb-12 px-3 lg:mb-0">
-          <div class="mb-2 flex justify-center">
-            <span class="text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
-                <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
-                  clip-rule="evenodd" />
-              </svg>
-            </span>
-          </div>
-          <h5 class="mb-6 font-bold text-primary">100+</h5>
-          <h6 class="mb-0 font-normal dark:text-neutral-50">Templates</h6>
-          <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
-        </div>
-        <div class="relative mb-12 px-3 lg:mb-0">
-          <div class="mb-2 flex justify-center">
-            <span class="text-primary">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-14 w-14">
-                <path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 000 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 000-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 00-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
-                  clip-rule="evenodd" />
-              </svg>
-            </span>
-          </div>
-          <h5 class="mb-6 font-bold text-primary">28</h5>
-          <h6 class="mb-0 font-normal dark:text-neutral-50">Plugins</h6>
         </div>
       </div>
     </section>
+  </div>
+  <!-- Portfolio Section -->
+  <section class="mx-auto mb-24 block md:flex"> 
+    <div class="py-12 pl-1 block items-center md:flex bg-slate-50 md:w-full justify-center gap-8">
+      <div class="">
+        <span class="mb-6 md:mb-0 text-right text-3xl md:text-5xl text-white font-playfair font-extrabold md:font-bold box-decoration-slice bg-degradado">
+          &nbsp;Desarrolla tu imagen&nbsp; <br/>
+          &nbsp;junto a nosotros!!!&nbsp; </span>
+      </div>
+      <div class="lg:w-[40rem] flex">
+        <p class="text-base py-2 text-center font-lato">
+          Juntos estudiaremos tu proyecto y crearemos un producto personalizado. Estos son algunos ejemplos populares, 
+          de no satisfacer tus necesidades, estamos seguros de que podemos ayudarte a llevar a cabo tu idea. <br/>
+          Confía en nuestra experiencia y tecnologia!!!
+        </p>
+      </div>
+    </div> 
+  </section>  
+  <!--Tabs navigation-->
+  <section>
+    <ul class="flex list-none border-b-0 justify-center" id="tabs-tab3" role="tablist" data-te-nav-ref>
+    <li role="presentation">
+      <a href="#tabs-home3" class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+        id="tabs-home-tab3" data-te-toggle="pill" data-te-target="#tabs-home3" data-te-nav-active role="tab" aria-controls="tabs-home3" aria-selected="true"
+        >Diseno Personajes</a>
+    </li>
+    <li role="presentation">
+      <a href="#tabs-profile3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+        id="tabs-profile-tab3" data-te-toggle="pill" data-te-target="#tabs-profile3" role="tab" aria-controls="tabs-profile3" aria-selected="false"
+        >Fondo</a>
+    </li>
+    <li role="presentation">
+      <a href="#tabs-messages3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
+        id="tabs-messages-tab3" data-te-toggle="pill" data-te-target="#tabs-messages3" role="tab" aria-controls="tabs-messages3" aria-selected="false"
+        >Web</a>
+    </li>
+    </ul>
+  </section>
+  <!--Tabs content-->
+  <section>
+    <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block" id="tabs-home3" role="tabpanel" data-te-tab-active aria-labelledby="tabs-home-tab3">
+      <div class="container mx-auto px-5 py-2 lg:px-32 md:pt-8">
+        <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex w-1/2 flex-wrap">
+            <div class="w-1/2 p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" /></div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" /></div>
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" /></div>
+          </div>
+          <div class="flex w-1/2 flex-wrap">
+            <div class="w-full p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" /></div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" /></div>
+            <div class="w-1/2 p-1 md:p-2">
+              <img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block" id="tabs-profile3" role="tabpanel" aria-labelledby="tabs-profile-tab3">
+      <div class="container mx-auto px-5 py-2 lg:px-32 md:pt-8">
+        <div class="-m-1 flex flex-wrap md:-m-2">
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2"><img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"/></div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2"><img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp"/></div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2"><img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp"/></div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2"><img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" /></div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2"><img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp" /></div>
+          </div>
+          <div class="flex w-1/3 flex-wrap">
+            <div class="w-full p-1 md:p-2"><img alt="gallery" class="block h-full w-full rounded-lg object-cover object-center" src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block" id="tabs-messages3" role="tabpanel" aria-labelledby="tabs-profile-tab3">
+      <div id="carouselExampleCaptions" class="relative container mx-auto px-5 py-2 lg:px-32 lg:pt-8"  data-te-carousel-init data-te-carousel-slide>
+        <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0" data-te-carousel-indicators>
+          <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active 
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-te-target="#carouselExampleCaptions"  data-te-slide-to="1"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 2"></button>
+          <button  type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2"
+            class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+          <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-active  data-te-carousel-item style="backface-visibility: hidden">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat" style="background-position: 50%">
+              <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(123).jpg" class="block w-full" />
+              <div  class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-50"></div>
+            </div>
+            <div  class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+              <h5 class="text-xl">First slide label</h5>
+              <p> Some representative placeholder content for the first slide.  </p>
+            </div>
+          </div>
+          <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item style="backface-visibility: hidden">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat" style="background-position: 50%">
+              <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(124).jpg" class="block w-full" />
+              <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-50"></div>
+            </div>
+            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+              <h5 class="text-xl">Second slide label</h5>
+              <p> Some representative placeholder content for the second slide.  </p>
+            </div>
+          </div>
+          <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item style="backface-visibility: hidden">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat" style="background-position: 50%">
+              <img src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(125).jpg" class="block w-full" />
+              <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-50"></div>
+            </div>
+            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+              <h5 class="text-xl">Third slide label</h5>
+              <p> Some representative placeholder content for the third slide. </p>
+            </div>
+          </div>
+          <button  class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+          type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
+          <span class="inline-block h-8 w-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+            </svg>
+          </span>
+          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]" >Previous</span >
+        </button>
+        <button class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+          type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
+          <span class="inline-block h-8 w-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none"  viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+              <path stroke-linecap="round"  stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+            </svg>
+          </span>
+          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+        </button>
+        </div>
+      </div>
+    </div>
+  </section> 
 
-    <!--boton de burbujas rosa-->
-    <section>
-      <button class="bubbly-button">Click me!</button>
-      <script>
-        var animateButton = function(e) {
+  <section class="text-center mx-auto py-8 my-8 bg-[#d16ba5]">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="h-14 w-14">
+              <path d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-white">5000+</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50 text-white">Components</h6>
+        <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
+      </div>
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="h-14 w-14">
+              <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
+              <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
+              <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-white">490+</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50 text-white">Design blocks</h6>
+        <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
+      </div>
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="h-14 w-14">
+              <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-white">100+</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50 text-white">Templates</h6>
+        <div class="absolute right-0 top-0 hidden h-full min-h-[1em] w-px self-stretch border-t-0 bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100 lg:block"></div>
+      </div>
+      <div class="relative mb-12 px-3 lg:mb-0">
+        <div class="mb-2 flex justify-center">
+          <span class="text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="h-14 w-14">
+              <path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 00-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 00-2.282.819l-.922 1.597a1.875 1.875 0 00.432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 000 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 00-.432 2.385l.922 1.597a1.875 1.875 0 002.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 002.28-.819l.923-1.597a1.875 1.875 0 00-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 000-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 00-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 00-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 00-1.85-1.567h-1.843zM12 15.75a3.75 3.75 0 100-7.5 3.75 3.75 0 000 7.5z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </div>
+        <h5 class="mb-6 font-bold text-white">28</h5>
+        <h6 class="mb-0 font-normal dark:text-neutral-50 text-white">Plugins</h6>
+      </div>
+    </div>
+  </section>
 
-          e.preventDefault;
-          //reset animation
-          e.target.classList.remove('animate');
-          
-          e.target.classList.add('animate');
-          setTimeout(function(){
-            e.target.classList.remove('animate');
-          },700);
-        };
-        
-        var bubblyButtons = document.getElementsByClassName("bubbly-button");
-        
-        for (var i = 0; i < bubblyButtons.length; i++) {
-          bubblyButtons[i].addEventListener('click', animateButton, false);
-        }
-      </script>
-    </section>
-    <!-- End of portfolio section -->
+  <div class=" w-full h-20 text-center">aqui va algo</div>
   </header>
  <!-- Footer container -->
- <footer class="bg-[#304058] text-[#f8f9fa] text-center lg:text-left ">
+ <footer class="bg-[#304058] text-[#f8f9fa] text-center lg:text-left">
   <!-- Social network icons container -->
   <div class="flex items-center justify-center border-b-2 border-[#131e2e] p-6 lg:justify-between">       
     <div class="mx-12 hidden lg:block">
       <span>Get connected with us on social networks:</span>
     </div>
-    <div class="flex justify-center mx-12">
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200">
+    <div class="grid md:flex justify-center grid-cols-5 gap-y-2">
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Behance -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+          <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+        </svg>
+      </a>
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Facebook -->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
           <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
         </svg>
       </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200">
-        <svg  xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
-          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Messenger -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewbox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+          <path d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z" />
         </svg>
       </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200">
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Whatsapp -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+        </svg>
+      </a>
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--telegram-->
+        <svg class="h-4 w-4" fill="white" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xml:space="preserve" xmlns:serif="http://www.serif.com/"  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+          <path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z" />
+        </svg>
+      </a>
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--google-->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white"  viewBox="0 0 24 24">
           <path d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
             fill-rule="evenodd"  clip-rule="evenodd" />
         </svg>
       </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200">
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--instagram-->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
           <path  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
         </svg>
       </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200">
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--linkedin-->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
           <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
         </svg>
       </a>
-      <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+      <a href="https://github.com/GlendaSethNefer" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--github-->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white"  viewBox="0 0 24 24">
           <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+        </svg>
+      </a>
+      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Dribbble -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+          <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z" />
         </svg>
       </a>
     </div>
@@ -259,16 +450,18 @@
     <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       <!-- Speak Section-->
       <div>
-        <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+        <h6 class="mb-4 flex items-center justify-center font-semibold font-playfair uppercase md:justify-start">
           <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
-          <a href="index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">Glenda Castro <br/> Darien Jerez</a>
+          <a href="index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">
+            Glenda Castro <br/> Darien Jerez</a>
         </h6>
         <p>
-          Nosotros podemos ayudarte a crear una experiencia digital atractiva para que tu negocio conecte con las personas.
+          Nosotros podemos ayudarte a crear una experiencia digital atractiva y 
+          única para que tu negocio conecte con las personas.
         </p>
       </div>
       <!--Card Section-->
-      <div class="">
+      <div class="pl-12">
         <div class="overflow-hidden relative h-20 w-60 mb-3 max-w-sm bg-azulvioleta shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
           <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar.jpg">
           <div class="flex flex-col py-5 pl-24">
@@ -285,7 +478,7 @@
         </div>
       </div>
       <!-- Products section -->
-      <div class="">
+      <div class="md:pl-16">
         <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
           Products</h6>
         <p class="mb-4 link link-hover"><a href="#!" class="">Diseño web</a></p>
@@ -340,7 +533,11 @@
     </a>
   </div>
 </footer>
-<script src="script.js"></script>
+<script
+  type="text/javascript"
+  src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js">  
+</script>
+
 </body>
 </html>
 
