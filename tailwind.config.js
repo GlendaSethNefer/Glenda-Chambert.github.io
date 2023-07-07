@@ -3,6 +3,20 @@
 module.exports = {
   theme: {
     extend: {},
+    colors: {
+      rosa: {
+        100: '#edc5dc',
+        300: '#d16ba5',
+        500: '#972f6a',
+        700: '#3e123b',
+      },
+      verdeaqua: {
+        100: '#93f6ff',
+        300: '#0aebff',
+        500: '#008793',
+        900: '#002d31',
+      },
+    },
     fontFamily: {
       sans: ['Balsamiq Sans', 'sans-serif'],
       serif: ['Marhey', 'serif'],
