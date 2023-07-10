@@ -8,154 +8,69 @@
     <script src="./code.jquery.com_jquery-3.7.0.js"></script>
     <script src="script.js"></script>
 </head>
-<body class="bg-slate-200 font-lato">  
-    <nav id="navbar" class="fixed-top bg-white p-5 shadow md:flex md:items-center md:justify-between">
-      <span class="flex items-center flex-shrink-0"> 
-        <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
-        <a href="index.html" class="visible font-extrabold font-playfair text-2xl text-[#d16ba5] tracking-tight pl-8 max-sm:hidden cursor-pointer">
-          Glenda Castro <br/> Darien Jerez</a>
+<body class="bg-slate-200 font-lato">    
+  <!-- Main navigation container -->
+  <nav id="navbar" class="relative flex w-full flex-nowrap items-center justify-between fixed-top bg-transparent text-primary-50 py-2 shadow-lg lg:flex-wrap lg:justify-start lg:py-4"
+  data-te-navbar-ref>
+  <div class="flex w-full flex-wrap items-center justify-between px-3">
+    <div class="flex items-center flex-shrink-0"> 
+      <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full mx-6 max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
+      <a href="index.html" class="visible flex font-extrabold font-playfair text-2xl tracking-tight max-sm:hidden cursor-pointer">
+        Glenda Castro <br/> Darien Jerez
+      </a>
+    </div>
+    <!-- Hamburger button for mobile view -->
+    <button class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+      type="button" data-te-collapse-init data-te-target="#navbarSupportedContent9" aria-controls="navbarSupportedContent9" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Hamburger icon -->
+      <span class="[&>svg]:w-7">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+          <path  fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
       </span>
-      </div>
-      <ul class="md:flex md:items-center z-[-1] md:z-auto md:static font-raleway absolute w-full left-0 md:w-auto md:py-0 pt-7 md:opacity-100 opacity-0 top-[-400px] pl-7 transition-all ease-in duration-500" id="menu">
-        <li class="mx-4 my-6 md:my-0"><a href="./assets/publico/services.html" class="text-base hover:text-teal-800">Portafolio</a></li>
-        <li class="mx-4 my-6 md:my-0"><a href="./assets/publico/services.html" class="text-base hover:text-teal-800">Servicios</a></li>
-        <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800">About Us</a></li>
-        <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800">Recurso</a></li>
-        <li class="mx-4 my-6 md:my-0 contents" data-te-nav-item-ref data-te-dropdown-ref>
-          <a href="#" class="text-base hover:text-teal-800 flex items-center" 
-            type="button" id="dropdownMenuButton2" data-te-dropdown-toggle-ref aria-expanded="false">Siguenos en
-              <span class="ml-1 w-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clip-rule="evenodd" />
-                </svg>
-              </span>
-          </a>
-          <ul class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
-            aria-labelledby="dropdownMenuButton2" data-te-dropdown-menu-ref>
-            <li><a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                  href="#" data-te-dropdown-item-ref>Action</a></li>
-            <li><a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                  href="#" data-te-dropdown-item-ref >Another action</a></li>
-            <li><a lass="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                  href="#" data-te-dropdown-item-ref >Something else here</a ></li>
-        </ul>
-        </li>
-        <button id="btn" href="#" type="button" data-te-ripple-init data-te-ripple-color="light"
-          class="rounded bg-[#ec9dca] px-4 py-2 ml-96 text-xs uppercase font-medium font-lato shadow-[0_4px_9px_-4px_#ffffff]">
-            Solicitar presupuesto
-        </button>
-      </ul> 
-    </nav>  
-  <!-- cuerpo pagina -->
-  <header> 
-  <div class=" h-2"></div>
-  <div class="container mt-24 mx-auto md:px-6">
-    <!-- Formulario de correo -->
-    <section class="mb-24 bg-[#008793] text-center dark:bg-neutral-900 lg:text-left">
-      <div class="px-6 py-12 md:px-12">
-        <div class="grid items-center gap-12 lg:grid-cols-2">
-          <div class="mt-12 lg:mt-0">
-            <h1 class="mb-12 text-5xl text-neutral-200 font-bold font-playfair leading-tight tracking-tight">
-              The best offer <br /><span class="text-[#ec9dca]">for your business</span>
-            </h1>
-            <p class="text-neutral-200 font-lato">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-              quibusdam tempora at cupiditate quis eum maiores libero veritatis? Dicta facilis sint aliquid ipsum atque?
-            </p>
-          </div>
-          <!-- Section: Design Block -->
-          <div class="mx-auto max-w-[700px] md:px-3">
-            <h2 class="mb-12 text-3xl font-bold">Contact us</h2>
-            <form>
-              <div class="relative mb-6">
-                <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleInput90" placeholder="Name" />
-                <label class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  for="exampleInput90">Full Name
-                </label>
-              </div>
-              <div class="relative mb-6">
-                <input type="email" class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleInput91" placeholder="Email address" />
-                <label class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  for="exampleInput91">Email address
-                </label>
-              </div>
-              <div class="relative mb-6">
-                <textarea class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                  id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
-                <label for="exampleFormControlTextarea1"
-                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                  >Message</label>
-              </div>
-              <div class="mb-6 flex min-h-[1.5rem] justify-center text-center pl-[1.5rem] md:flex">
-                <input class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-rosa-100 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:content-[''] checked:border-rosa-100 checked:bg-rosa-100 checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-rosa-300 dark:checked:bg-ros-300 dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
-                  type="checkbox" value="" id="exampleCheck96"  checked />
-                <label class="inline-flex pl-[0.15rem] hover:cursor-pointer" for="exampleCheck96">
-                  Send me a copy of this message
-                </label>
-                <button type="button" data-te-ripple-init data-te-ripple-color="light"
-                class="mx-12 inline-flex rounded bg-rosa-100 px-6 py-2 text-xs font-bold uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-rosa-300 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-rosa-500 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-                Send
-              </button>
-              </div>
-              
-              <div class="text-center">
-                        <p class="mb-6">or sign up with:</p>
-                      </div>
-                      <div class="flex justify-center">
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-rosa-300 transition duration-200 ease-in-out hover:text-rosa-500  dark:text-rosa-100 dark:hover:text-rosa-300">
-                          <!-- Facebook -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-                            </svg>
-                          </span>
-                        </a>
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-rosa-300 transition duration-200 ease-in-out dark:text-rosa-100 dark:hover:text-rosa-300">
-                          <!-- Google -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5"
-                                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
-                            </svg>
-                          </span>
-                        </a>
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-[#d16ba5] transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-rosa-100 dark:hover:text-rosa-300">
-                          <!-- Twitter -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5"
-                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
-                            </svg>
-                          </span>
-                        </a>
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
-                          <!-- Github -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5"
-                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                            </svg>
-                          </span>
-                        </a>
-                      </div>
-            </form>
-          </div>
-          <!-- Section: Design Block -->
+    </button>
+    <!-- Collapsible navbar container -->
+    <div class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto text-lg" id="navbarSupportedContent9" data-te-collapse-item>
+      <!-- Left links -->
+      <div class="list-style-none ml-auto flex flex-col pl-0 lg:mt-1 lg:flex-row md:text-center pr-10" id="menu" data-te-navbar-nav-ref>
+        <div class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1" data-te-nav-item-ref>
+          <a class="active disabled:text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+            aria-current="page" href="#" data-te-nav-link-ref >Portafolio</a >
+        </div>
+        <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
+          <a class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+            href="#" data-te-nav-link-ref >Recursos</a >
+        </div>
+        <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
+          <a  class="p-0 text-neutral-500 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+            href="#" data-te-nav-link-ref>About Us</a>
+        </div>
+        <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-link-ref>
+          <a class="text-black/30 lg:px-2 [&.active]:text-black/90 dark:[&.active]:text-neutral-400" >Recursos</a >
         </div>
       </div>
-      
-    </section>
+      <div class="list-style-none ml-auto flex flex-col pl-0 lg:mt-1 lg:flex-row md:text-center pr-10">
+        <button id="btn" href="#" type="button" data-te-ripple-init data-te-ripple-color="light"
+          class="rounded bg-rosa-300 text-white px-4 py-2 w-fit text-base uppercase font-medium font-lato">
+            Solicitar presupuesto
+        </button>
+      </div>
+    </div>
+  </div>
+  </nav>
+      <script>
+      // Initialization for ES Users
+      import {
+        Collapse,
+        initTE,
+      } from "tw-elements";
+
+      initTE({ Collapse });
+      </script> 
+  <!-- cuerpo pagina -->
+  <header> 
+  <div class="h-2 mt-32 bg-[url('/assets/image/bg-header-2.jpg')]">
   </div>
   <!-- Portfolio Section -->
   <section class="mx-auto mb-24 block md:flex"> 
@@ -197,7 +112,7 @@
     </li>
     </ul>
   </section>
-  <!--Tabs content-->
+  <!--Galerias-->
   <section>
     <div class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block" id="tabs-home3" role="tabpanel" data-te-tab-active aria-labelledby="tabs-home-tab3">
       <div class="container mx-auto px-5 py-2 lg:px-32 md:pt-8">
@@ -314,7 +229,116 @@
       </div>
     </div>
   </section> 
-
+  <!-- Fin de portafolio -->
+  <!-- Formulario de correo -->
+  <div class="container mt-24 mx-auto md:px-6">
+    <section class="mb-24 bg-verdeaqua-500 text-center dark:bg-neutral-900 lg:text-left">
+      <div class="px-6 py-12 md:px-12">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div class="mt-12 lg:mt-0">
+            <h1 class="mb-12 text-5xl text-slate-200 font-bold font-playfair leading-tight tracking-tight">
+              The best offer <br/><span class="text-rosa-100">for your business</span>
+            </h1>
+            <p class="text-neutral-200 font-lato">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+              quibusdam tempora at cupiditate quis eum maiores libero veritatis? Dicta facilis sint aliquid ipsum atque?
+            </p>
+          </div>
+          <!-- Section: Design Block -->
+          <div class="mx-auto max-w-[700px] md:px-3">
+            <h2 class="mb-12 text-3xl font-bold">Contact us</h2>
+            <form>
+              <div class="relative mb-6">
+                <input type="text" class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  id="exampleInput90" placeholder="Name" />
+                <label class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  for="exampleInput90">Full Name
+                </label>
+              </div>
+              <div class="relative mb-6">
+                <input type="email" class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-primary data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:peer-focus:text-primary [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  id="exampleInput91" placeholder="Email address" />
+                <label class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  for="exampleInput91">Email address
+                </label>
+              </div>
+              <div class="relative mb-6">
+                <textarea class="peer block min-h-[auto] w-full rounded border-0 bg-transparent py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                  id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
+                <label for="exampleFormControlTextarea1"
+                  class="pointer-events-none absolute top-0 left-3 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                  >Message</label>
+              </div>
+              <div class="mb-6 flex min-h-[1.5rem] justify-center text-center pl-[1.5rem] md:flex">
+                <input class="relative float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] appearance-none rounded-[0.25rem] border-[0.125rem] border-solid border-rosa-100 outline-none before:pointer-events-none before:absolute before:h-[0.875rem] before:w-[0.875rem] before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:content-[''] checked:border-rosa-100 checked:bg-rosa-100 checked:before:opacity-[0.16] checked:after:absolute checked:after:ml-[0.25rem] checked:after:-mt-px checked:after:block checked:after:h-[0.8125rem] checked:after:w-[0.375rem] checked:after:rotate-45 checked:after:border-[0.125rem] checked:after:border-t-0 checked:after:border-l-0 checked:after:border-solid checked:after:border-white checked:after:bg-transparent checked:after:content-[''] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:shadow-none focus:transition-[border-color_0.2s] focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[0px_0px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-[0.875rem] focus:after:w-[0.875rem] focus:after:rounded-[0.125rem] focus:after:content-[''] checked:focus:before:scale-100 checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:after:ml-[0.25rem] checked:focus:after:-mt-px checked:focus:after:h-[0.8125rem] checked:focus:after:w-[0.375rem] checked:focus:after:rotate-45 checked:focus:after:rounded-none checked:focus:after:border-[0.125rem] checked:focus:after:border-t-0 checked:focus:after:border-l-0 checked:focus:after:border-solid checked:focus:after:border-white checked:focus:after:bg-transparent dark:border-neutral-600 dark:checked:border-rosa-300 dark:checked:bg-ros-300 dark:focus:before:shadow-[0px_0px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[0px_0px_0px_13px_#3b71ca]"
+                  type="checkbox" value="" id="exampleCheck96"  checked />
+                <label class="inline-flex pl-[0.15rem] hover:cursor-pointer" for="exampleCheck96">
+                  Send me a copy of this message
+                </label>
+                <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                class="mx-12 inline-flex rounded bg-rosa-100 px-6 py-2 text-xs font-bold uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-rosa-300 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-rosa-500 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+                Send
+              </button>
+              </div>
+              
+              <div class="text-center">
+                        <p class="mb-6">or sign up with:</p>
+                      </div>
+                      <div class="flex justify-center">
+                        <a href="#!" role="button"
+                          class="action:text-primary-700 dark:action:text-primary-600 text-rosa-300 transition duration-200 ease-in-out hover:text-rosa-500  dark:text-rosa-100 dark:hover:text-rosa-300">
+                          <!-- Facebook -->
+                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path fill="#d16ba5" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                            </svg>
+                          </span>
+                        </a>
+                        <a href="#!" role="button"
+                          class="action:text-primary-700 dark:action:text-primary-600 text-rosa-300 transition duration-200 ease-in-out dark:text-rosa-100 dark:hover:text-rosa-300">
+                          <!-- Google -->
+                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path fill="#d16ba5"
+                                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                            </svg>
+                          </span>
+                        </a>
+                        <a href="#!" role="button"
+                          class="action:text-primary-700 dark:action:text-primary-600 text-[#d16ba5] transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-rosa-100 dark:hover:text-rosa-300">
+                          <!-- Twitter -->
+                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path fill="#d16ba5"
+                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                            </svg>
+                          </span>
+                        </a>
+                        <a href="#!" role="button"
+                          class="action:text-primary-700 dark:action:text-primary-600 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
+                          <!-- Github -->
+                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                              <path fill="#d16ba5"
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+            </form>
+          </div>
+          <!-- Section: Design Block -->
+        </div>
+      </div>
+      
+    </section>
+  </div>
+  <!-- fin Formulario de correo -->
+<!-- something more-->
   <section class="text-center mx-auto py-8 my-8 bg-[#d16ba5]">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <div class="relative mb-12 px-3 lg:mb-0">
