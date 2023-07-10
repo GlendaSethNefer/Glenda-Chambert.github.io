@@ -10,7 +10,7 @@
 </head>
 <body class="bg-slate-200 font-lato">    
   <!-- Main navigation container -->
-  <nav id="navbar" class="relative flex w-full flex-nowrap items-center justify-between fixed-top bg-transparent text-primary-50 py-2 shadow-lg lg:flex-wrap lg:justify-start lg:py-4"
+  <nav id="navbar" class="relative flex w-full flex-nowrap items-center justify-between fixed-top bg-transparent text-primary-50 py-2 lg:flex-wrap lg:justify-start lg:py-4"
   data-te-navbar-ref>
   <div class="flex w-full flex-wrap items-center justify-between px-3">
     <div class="flex items-center flex-shrink-0"> 
@@ -69,19 +69,18 @@
       initTE({ Collapse });
       </script> 
   <!-- cuerpo pagina -->
-  <header> 
-  <div class="h-2 mt-32 bg-[url('/assets/image/bg-header-2.jpg')]">
-  </div>
+  <header>
   <!-- Portfolio Section -->
-  <section class="mx-auto mb-24 block md:flex"> 
-    <div class="py-12 pl-1 block items-center md:flex bg-slate-50 md:w-full justify-center gap-8">
-      <div class="">
+  <section class="mx-auto block">     
+    <div class="pb-12 pt-32 px-12 block items-center md:w-full md:flex justify-center gap-8 bg-fixed bg-cover h-[35rem] bg-[url('/assets/image/bg-header-2-remasterizado.jpg')]">
+      
+      <div class="pl-16">
         <span class="mb-6 md:mb-0 text-right text-3xl md:text-5xl text-white font-playfair font-extrabold md:font-bold box-decoration-slice bg-degradado">
           &nbsp;Desarrolla tu imagen&nbsp; <br/>
           &nbsp;junto a nosotros!!!&nbsp; </span>
       </div>
       <div class="lg:w-[40rem] flex">
-        <p class="text-base py-2 text-center font-lato">
+        <p class="text-base pb-2 pt-6 text-center text-rosa-100 font-lato">
           Juntos estudiaremos tu proyecto y crearemos un producto personalizado. Estos son algunos ejemplos populares, 
           de no satisfacer tus necesidades, estamos seguros de que podemos ayudarte a llevar a cabo tu idea. <br/>
           Confía en nuestra experiencia y tecnologia!!!
@@ -90,26 +89,26 @@
     </div> 
   </section>  
   <!--Tabs navigation-->
-  <section>
+  <section class=" pt-8">
     <div class="flex justify-center w-full pb-2">
-      <h4 class="uppercase font-playfair font-bold text-2xl">portafolio</h4>
+      <h4 class="uppercase font-playfair font-bold text-2xl text-rosa-500">portafolio</h4>
     </div>
     <ul class="flex list-none border-b-0 justify-center" id="tabs-tab3" role="tablist" data-te-nav-ref>
-    <li role="presentation">
-      <a href="#tabs-home3" class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-        id="tabs-home-tab3" data-te-toggle="pill" data-te-target="#tabs-home3" data-te-nav-active role="tab" aria-controls="tabs-home3" aria-selected="true"
-        >Diseno Personajes</a>
-    </li>
-    <li role="presentation">
-      <a href="#tabs-profile3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-        id="tabs-profile-tab3" data-te-toggle="pill" data-te-target="#tabs-profile3" role="tab" aria-controls="tabs-profile3" aria-selected="false"
-        >Fondo</a>
-    </li>
-    <li role="presentation">
-      <a href="#tabs-messages3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-        id="tabs-messages-tab3" data-te-toggle="pill" data-te-target="#tabs-messages3" role="tab" aria-controls="tabs-messages3" aria-selected="false"
-        >Web</a>
-    </li>
+      <li role="presentation">
+        <a href="#tabs-home3" class="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-rosa-500 hover:isolate hover:border-transparent hover:bg-rosa-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-rosa-500 data-[te-nav-active]:text-rosa-500 dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-rosa-300 dark:data-[te-nav-active]:text-rosa-300"
+          id="tabs-home-tab3" data-te-toggle="pill" data-te-target="#tabs-home3" data-te-nav-active role="tab" aria-controls="tabs-home3" aria-selected="true"
+          >Diseno Personajes</a>
+      </li>
+      <li role="presentation">
+        <a href="#tabs-profile3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-rosa-500 hover:isolate hover:border-transparent hover:bg-rosa-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-rosa-500 data-[te-nav-active]:text-rosa-500 dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-rosa-300 dark:data-[te-nav-active]:text-rosa-300"
+          id="tabs-profile-tab3" data-te-toggle="pill" data-te-target="#tabs-profile3" role="tab" aria-controls="tabs-profile3" aria-selected="false"
+          >Fondo</a>
+      </li>
+      <li role="presentation">
+        <a href="#tabs-messages3" class="focus:border-transparen my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-rosa-500 hover:isolate hover:border-transparent hover:bg-rosa-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-rosa-500 data-[te-nav-active]:text-rosa-500 dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-rosa-300 dark:data-[te-nav-active]:text-rosa-300"
+          id="tabs-messages-tab3" data-te-toggle="pill" data-te-target="#tabs-messages3" role="tab" aria-controls="tabs-messages3" aria-selected="false"
+          >Web</a>
+      </li>
     </ul>
   </section>
   <!--Galerias-->
@@ -280,65 +279,166 @@
                 Send
               </button>
               </div>
-              
-              <div class="text-center">
-                        <p class="mb-6">or sign up with:</p>
-                      </div>
-                      <div class="flex justify-center">
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-rosa-300 transition duration-200 ease-in-out hover:text-rosa-500  dark:text-rosa-100 dark:hover:text-rosa-300">
-                          <!-- Facebook -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
-                            </svg>
-                          </span>
-                        </a>
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-rosa-300 transition duration-200 ease-in-out dark:text-rosa-100 dark:hover:text-rosa-300">
-                          <!-- Google -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5"
-                                d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
-                            </svg>
-                          </span>
-                        </a>
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-[#d16ba5] transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-rosa-100 dark:hover:text-rosa-300">
-                          <!-- Twitter -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5"
-                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
-                            </svg>
-                          </span>
-                        </a>
-                        <a href="#!" role="button"
-                          class="action:text-primary-700 dark:action:text-primary-600 text-primary transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
-                          <!-- Github -->
-                          <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
-                              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                              <path fill="#d16ba5"
-                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
-                            </svg>
-                          </span>
-                        </a>
-                      </div>
+              <div class="text-center"><p class="mb-6">or sign up with:</p>
+              </div>
+              <div class="flex justify-center">
+                <a href="#!" role="button"
+                  class="action:text-primary-700 dark:action:text-primary-600 text-rosa-100 transition duration-200 ease-in-out hover:text-rosa-500  dark:text-rosa-100 dark:hover:text-rosa-300">
+                  <!-- Facebook -->
+                  <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                      <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                      <path fill="#edc5dc" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                    </svg>
+                  </span>
+                </a>
+                <a href="#!" role="button"
+                  class="action:text-primary-700 dark:action:text-primary-600 text-rosa-100 transition duration-200 ease-in-out dark:text-rosa-100 dark:hover:text-rosa-300">
+                  <!-- Google -->
+                  <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512">
+                      <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                      <path fill="#edc5dc"
+                        d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                    </svg>
+                  </span>
+                </a>
+                <a href="#!" role="button"
+                  class="action:text-primary-700 dark:action:text-primary-600 text-rosa-100 transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-rosa-100 dark:hover:text-rosa-300">
+                  <!-- Twitter -->
+                  <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                      <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                      <path fill="#edc5dc"
+                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                    </svg>
+                  </span>
+                </a>
+                <a href="#!" role="button"
+                  class="action:text-primary-700 dark:action:text-primary-600 text-rosa-100 transition duration-200 ease-in-out hover:text-primary-600 focus:text-primary-600 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500">
+                  <!-- Github -->
+                  <span class="[&>svg]:mx-4 [&>svg]:h-4 [&>svg]:w-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                      <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                      <path fill="#edc5dc"
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
             </form>
           </div>
-          <!-- Section: Design Block -->
+          <!--  fin Section: Design Block -->
         </div>
       </div>
-      
     </section>
   </div>
   <!-- fin Formulario de correo -->
-<!-- something more-->
+  <section class="container ml-auto mr-auto flex flex-wrap items-start mt-8">
+    <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
+      <h1 class="text-3xl font-playfair font-extrabold text-center">Podemos ayudarte!!!</h1>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+        <figure class="mb-2">
+          <img src="assets/img/s1.png" alt="" class="h-64 ml-auto mr-auto" />
+        </figure>
+        <div class="rounded-lg p-4 flex flex-col">
+          <div>
+            <h5 class="text-2xl font-bold leading-none text-center"> Branding y Estrategia</h5>
+            <p class="mt-4 list-decimal">Desarrollo de marca <br/>Identidad corporativa<br/>Narrativa de marca <br/> 
+                            Estrategia de comunicación<br/>Consultoría de marca<br/> Arquitectura de marca </p>
+          </div>
+          <div class="flex items-center mt-4">
+            <a href="#" class="font-bold text-orange-900">Más</a>
+            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+        <figure class="mb-2">
+          <img src="assets/img/s2.png" alt="" class="h-64 ml-auto mr-auto" />
+        </figure>
+        <div class="rounded-lg p-4 flex flex-col">
+          <div>
+            <h5 class="text-2xl font-bold leading-none text-center"> Desarrollo Web </h5>
+            <p class="mt-4"> Diseño web personalizado
+              Diseño Interfaz UX / UI
+              Diseño web responsive
+              Redacción de contenidos web
+              Auditoría rendimiento web
+              Web para comercio electrónico
+          </div>
+          <div class="flex items-center mt-4">
+            <a href="#" class="font-bold text-orange-900">Leer más</a>
+            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+        <figure class="mb-2">
+          <img src="assets/img/s3.png" alt="" class="h-64 ml-auto mr-auto" />
+        </figure>
+        <div class="rounded-lg p-4 flex flex-col">
+          <div>
+            <h5 class="text-2xl font-bold leading-none text-center"> Ilustraciones </h5>
+            <p class="mt-4"> Nulla blandit ac tortor a ullamcorper. Fusce dictum, quam at ornare finibus, leo erat lacinia urna, vitae interdum est lacus vel massa. Donec porttitor posuere lacus sit amet auctor. Fusce fringilla mauris ipsum, nec tempus odio porttitor a. Cras eu urna eget est egestas pulvinar. </p>
+          </div>
+          <div class="flex items-center mt-4">
+            <a href="#" class="font-bold text-orange-900">Leer más</a>
+            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+        <figure class="mb-2">
+          <img src="assets/img/s4.png" alt="" class="h-64 ml-auto mr-auto" />
+        </figure>
+        <div class="rounded-lg p-4 flex flex-col">
+          <div>
+            <h5 class="text-2xl font-bold leading-none text-center"> Marqueting Digital </h5>
+            <p class="mt-4"> Posicionamiento SEO/SEM
+              Gestión de redes sociales
+              Creación de contenido
+              Gestión de comunicación digital
+              Campañas digitales
+              E-mail Marketing </p>
+          </div>
+          <div class="flex items-center mt-4">
+            <a href="#" class="font-bold text-orange-900">Leer más</a>
+            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- something more-->
   <section class="text-center mx-auto py-8 my-8 bg-[#d16ba5]">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <div class="relative mb-12 px-3 lg:mb-0">
