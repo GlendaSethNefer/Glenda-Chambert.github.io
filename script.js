@@ -1,5 +1,5 @@
 $(Window).scroll(function(){
-    if ($("#navbar").offset().top > 90) {
+    if ($("#navbar").offset().top > 450) {
         $("#navbar").addClass("bg-verdeazul");
     } else {
       $("#navbar").removeClass("bg-verdeazul");

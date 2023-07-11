@@ -1,163 +1,85 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>   <!-- CDN de Tailwind CSS  sirve para utilizarlo sin tener que instalar nada local <script src="https://cdn.tailwindcss.com"></script> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Desarrollo Web Glenda Castro - Darien Jerez </title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../code.jquery.com_jquery-3.7.0.js"></script>
-    <script
-      type="text/javascript"
-      src="../node_modules/tw-elements/dist/js/tw-elements.umd.min.js">
-    </script>
+    <script src="../../script.js"></script>
 </head>
-<body class="font-lora">
-  <nav id="navbar" class="fixed-top bg-white p-5 shadow md:flex md:items-center md:justify-between">
-    <span class="flex items-center flex-shrink-0"> 
-      <img src="../image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
-      <a href="../../index.html" class="visible font-extrabold text-xl text-[#d16ba5] tracking-tight pl-8 max-sm:hidden cursor-pointer">
-        Glenda Castro <br/> Darien Jerez</a>
-    </span>
+<body class="bg-slate-200 font-lato">    
+  <!-- Main navigation container -->
+  <nav id="navbar" class="relative flex w-full flex-nowrap items-center justify-between fixed-top bg-transparent text-primary-50 py-2 lg:flex-wrap lg:justify-start lg:py-4"
+  data-te-navbar-ref>
+  <div class="flex w-full flex-wrap items-center justify-between px-3">
+    <div class="flex items-center flex-shrink-0"> 
+      <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full mx-6 max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
+      <a href="../../index.html" class="visible flex font-extrabold font-playfair text-2xl tracking-tight max-sm:hidden cursor-pointer">
+        Glenda Castro  -|-  Darien Jerez
+      </a>
     </div>
-    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 pt-7 md:opacity-100 opacity-0 top-[-400px] pl-7 transition-all ease-in duration-500" id="menu">
-      <li class="mx-4 my-6 md:my-0"><a href="./services.html" class="text-base hover:text-teal-800">Servicios</a></li>
-      <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800">About Us</a></li>
-      <li class="mx-4 my-6 md:my-0"><a href="#" class="text-base hover:text-teal-800">Recurso</a></li>
-      <li class="mx-4 my-6 md:my-0 contents" data-te-nav-item-ref data-te-dropdown-ref>
-        <a href="#" class="text-base hover:text-teal-800 flex items-center" 
-          type="button" id="dropdownMenuButton2" data-te-dropdown-toggle-ref aria-expanded="false">Siguenos en
-            <span class="ml-1 w-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-              </svg>
-            </span>
-        </a>
-        <ul class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded-lg border-none bg-white/50 bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&[data-te-dropdown-show]]:block"
-          aria-labelledby="dropdownMenuButton2" data-te-dropdown-menu-ref>
-          <li><a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                href="#" data-te-dropdown-item-ref>Action</a></li>
-          <li><a class="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                href="#" data-te-dropdown-item-ref >Another action</a></li>
-          <li><a lass="block w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600"
-                href="#" data-te-dropdown-item-ref >Something else here</a ></li>
-      </ul>
-      </li>
-      <button id="btn" href="#" type="button" data-te-ripple-init data-te-ripple-color="light"
-        class="rounded bg-[#ec9dca] px-4 py-2 ml-96 text-xs uppercase font-medium shadow-[0_4px_9px_-4px_#ffffff]">
-          Solicitar presupuesto
-      </button>
-    </ul> 
+    <!-- Hamburger button for mobile view -->
+    <button class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+      type="button" data-te-collapse-init data-te-target="#navbarSupportedContent9" aria-controls="navbarSupportedContent9" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Hamburger icon -->
+      <span class="[&>svg]:w-7">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+          <path  fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
+      </span>
+    </button>
+    <!-- Collapsible navbar container -->
+    <div class="!visible mt-2 hidden flex-grow basis-[100%] items-center lg:mt-0 lg:!flex lg:basis-auto text-lg" id="navbarSupportedContent9" data-te-collapse-item>
+      <!-- Left links -->
+      <div class="list-style-none justify-around ml-auto flex flex-col pl-0 lg:mt-1 lg:flex-row md:text-center pr-10" id="menu" data-te-navbar-nav-ref>
+        <div class="my-4 pl-2 lg:my-0 lg:pl-2 lg:pr-1" data-te-nav-item-ref>
+          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl"
+            aria-current="page" href="../../index.html" data-te-nav-link-ref >Portafolio</a >
+        </div>
+        <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
+          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl"
+            href="#" data-te-nav-link-ref >Servicios</a >
+        </div>
+        <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
+          <a  class="hover:bg-rosa-100/50 rounded-xl lg:px-2"
+            href="#" data-te-nav-link-ref>About Us</a>
+        </div>
+        <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-link-ref>
+          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl">Recursos</a >
+        </div>
+        <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-link-ref>
+          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl">Blog</a >
+        </div>
+      </div>
+      <div class="list-style-none ml-auto flex flex-col pl-0 lg:mt-1 lg:flex-row md:text-center pr-10">
+        <button type="button" data-te-ripple-init data-te-ripple-color="light" style="color: black !important;"
+          class="mx-12 inline-flex rounded bg-rosa-100 px-6 py-2 text-xs font-bold uppercase leading-normal transition duration-150 ease-in-out hover:bg-rosa-300 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-rosa-500 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+          Solicitar Presupuesto
+        </button>
+      </div>
+    </div>
+  </div>
   </nav>
-<header>
-<div class="h-32"></div>
-<!--Seccion de servicios-->
-  <section class="container ml-auto mr-auto flex flex-wrap items-start mt-8">
-    <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
-      <h1 class="text-3xl font-playfair font-extrabold text-center">Podemos ayudarte!!!</h1>
-    </div>
-    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
-        <figure class="mb-2">
-          <img src="assets/img/s1.png" alt="" class="h-64 ml-auto mr-auto" />
-        </figure>
-        <div class="rounded-lg p-4 flex flex-col">
-          <div>
-            <h5 class="text-2xl font-bold leading-none text-center"> Branding y Estrategia</h5>
-            <p class="mt-4 list-decimal">Desarrollo de marca <br/>Identidad corporativa<br/>Narrativa de marca <br/> 
-                            Estrategia de comunicación<br/>Consultoría de marca<br/> Arquitectura de marca </p>
-          </div>
-          <div class="flex items-center mt-4">
-            <a href="#" class="font-bold text-orange-900">Más</a>
-            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
-        <figure class="mb-2">
-          <img src="assets/img/s2.png" alt="" class="h-64 ml-auto mr-auto" />
-        </figure>
-        <div class="rounded-lg p-4 flex flex-col">
-          <div>
-            <h5 class="text-2xl font-bold leading-none text-center"> Desarrollo Web </h5>
-            <p class="mt-4"> Diseño web personalizado
-              Diseño Interfaz UX / UI
-              Diseño web responsive
-              Redacción de contenidos web
-              Auditoría rendimiento web
-              Web para comercio electrónico
-          </div>
-          <div class="flex items-center mt-4">
-            <a href="#" class="font-bold text-orange-900">Leer más</a>
-            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
-        <figure class="mb-2">
-          <img src="assets/img/s3.png" alt="" class="h-64 ml-auto mr-auto" />
-        </figure>
-        <div class="rounded-lg p-4 flex flex-col">
-          <div>
-            <h5 class="text-2xl font-bold leading-none text-center"> Ilustraciones </h5>
-            <p class="mt-4"> Nulla blandit ac tortor a ullamcorper. Fusce dictum, quam at ornare finibus, leo erat lacinia urna, vitae interdum est lacus vel massa. Donec porttitor posuere lacus sit amet auctor. Fusce fringilla mauris ipsum, nec tempus odio porttitor a. Cras eu urna eget est egestas pulvinar. </p>
-          </div>
-          <div class="flex items-center mt-4">
-            <a href="#" class="font-bold text-orange-900">Leer más</a>
-            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-      <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
-        <figure class="mb-2">
-          <img src="assets/img/s4.png" alt="" class="h-64 ml-auto mr-auto" />
-        </figure>
-        <div class="rounded-lg p-4 flex flex-col">
-          <div>
-            <h5 class="text-2xl font-bold leading-none text-center"> Marqueting Digital </h5>
-            <p class="mt-4"> Posicionamiento SEO/SEM
-              Gestión de redes sociales
-              Creación de contenido
-              Gestión de comunicación digital
-              Campañas digitales
-              E-mail Marketing </p>
-          </div>
-          <div class="flex items-center mt-4">
-            <a href="#" class="font-bold text-orange-900">Leer más</a>
-            <button href="javascript:;" class="rounded-full bg-purple-900 text-white hover:bg-white hover:text-purple-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-4 transition duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</header>
-<footer class="bg-[#304058] text-[#f8f9fa] text-center lg:text-left">
+      <script>
+      // Initialization for ES Users
+      import {
+        Collapse,
+        initTE,
+      } from "tw-elements";
+
+      initTE({ Collapse });
+      </script> 
+  <!-- cuerpo pagina -->
+  <header>
+    <div class=" bg-verdeaqua-900 text-verdeaqua-100 text-center w-full justify-center py-24 block">
+      <h1 class="text-center text-xl">Esto es un blog de desarrollo Web</h1>
+      <p>aqui hablaremos sobre tendencias de diseno, </br> actualizaciones y versiones de programas </br> ademas debe estar llena de publiidad para el SEO</p>
+    </div> 
+  </header>
+ <!-- Footer container -->
+ <footer class="bg-[#304058] text-[#f8f9fa] text-center lg:text-left">
   <!-- Social network icons container -->
   <div class="flex items-center justify-center border-b-2 border-[#131e2e] p-6 lg:justify-between">       
     <div class="mx-12 hidden lg:block">
@@ -222,9 +144,9 @@
     <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
       <!-- Speak Section-->
       <div>
-        <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
-          <img src="../image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
-          <a href="../../index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">
+        <h6 class="mb-4 flex items-center justify-center font-semibold font-playfair uppercase md:justify-start">
+          <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
+          <a href="index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">
             Glenda Castro <br/> Darien Jerez</a>
         </h6>
         <p>
@@ -235,14 +157,14 @@
       <!--Card Section-->
       <div class="pl-12">
         <div class="overflow-hidden relative h-20 w-60 mb-3 max-w-sm bg-azulvioleta shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
-          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="../image/avatar.jpg">
+          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar.jpg">
           <div class="flex flex-col py-5 pl-24">
             <strong class=" text-sm font-medium dark:text-slate-200">Glenda Castro R</strong>
             <span class="text-slate-200 text-sm font-medium dark:text-slate-400">Web Developer</span>
           </div>
         </div>
         <div class="overflow-hidden relative h-20 w-60 max-w-sm bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
-          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="../image/avatar dari.jpg">
+          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar dari.jpg">
           <div class="flex flex-col py-5 pl-24">
             <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Darien Jerez R</strong>
             <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Graphic Designer</span>

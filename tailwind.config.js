@@ -2,7 +2,7 @@
 
 module.exports = {
   theme: {
-    extend: {},
+    extend: [],
     colors: {
       rosa: {
         100: '#edc5dc',
@@ -30,13 +30,12 @@ module.exports = {
       raleway: ['Raleway'],
     },
   },
-
   content: [
     "./**/*.{html,js}",
     "./assets/publico/*.{html,js}",
     "./node_modules/tw-elements/dist/js/**/*.js"
-  ],
     
+  ],
   plugins: [require("tw-elements/dist/plugin.cjs")],
   darkMode: "class"
   }
