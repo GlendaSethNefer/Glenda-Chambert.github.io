@@ -38,7 +38,7 @@
           <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl" href="#portafolio" data-te-nav-link-ref >Portafolio</a >
         </div>
         <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
-          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl" href="#" data-te-nav-link-ref >Servicios</a >
+          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl" href="#servicios" data-te-nav-link-ref >Servicios</a >
         </div>
         <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-item-ref>
           <a  class="hover:bg-rosa-100/50 rounded-xl lg:px-2" href="#" data-te-nav-link-ref>About Us</a>
@@ -47,7 +47,7 @@
           <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl">Recursos</a >
         </div>
         <div class="mb-4 pl-2 lg:mb-0 lg:pl-0 lg:pr-1" data-te-nav-link-ref>
-          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl" href="./assets/publico/blog.html">Blog</a >
+          <a class="lg:px-2 hover:bg-rosa-100/50 rounded-xl" href="./assets/publico/blog.html">Blog notice</a >
         </div>
       </div>
       <div class="list-style-none ml-auto flex flex-col pl-0 lg:mt-1 lg:flex-row md:text-center pr-10">
@@ -70,11 +70,11 @@
       </script> 
   <!-- cuerpo pagina -->
   <header>
-  <!-- Portfolio Section -->
+  <!-- Call to Action -->
   <section class="mx-auto block">     
     <div class="pb-12 pt-32 px-12 block items-center md:w-full md:flex justify-center gap-8 bg-fixed bg-cover h-[35rem] bg-[url('/assets/image/bg-header-2-remasterizado.jpg')]">
       <div class="pl-16">
-      <span class="mb-6 md:mb-0 text-right text-3xl md:text-5xl text-white font-playfair font-extrabold md:font-bold box-decoration-slice bg-degradado">
+      <span class="mb-6 md:mb-0 text-right text-2xl md:text-5xl text-white font-playfair md:font-extrabold font-bold box-decoration-slice bg-degradado">
         &nbsp;Desarrolla tu imagen&nbsp; <br/>
         &nbsp;junto a nosotros!!!&nbsp; </span>
       </div>
@@ -86,11 +86,11 @@
           Confía en nuestra experiencia y tecnologia!!!
         </p>
       </div>
-    </div> 
+      <p id="portafolio"></p>
+    </div>  
   </section>  
-  <!--Tabs navigation-->
-  <section class="pt-8" id="portafolio">
-    <a href="#portafolio" ></a>
+  <!-- Portafolio Tabs navigation de la galeria-->
+  <section class="pt-8">
     <div class="flex justify-center w-full pb-2">
       <h4 class="uppercase font-playfair font-bold text-2xl text-rosa-500">portafolio</h4>
     </div>
@@ -160,8 +160,9 @@
         </div>
       </div>
     </div>
+    <!--galeria pag web-->
     <div class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block" id="tabs-messages3" role="tabpanel" aria-labelledby="tabs-profile-tab3">
-      <div id="carouselExampleCaptions" class="relative container mx-auto px-5 py-2 lg:px-32 lg:pt-8"  data-te-carousel-init data-te-carousel-slide>
+      <div id="carouselExampleCaptions" class="relative container mx-auto px-5 py-2 lg:px-32 lg:pt-8" data-te-carousel-init data-te-carousel-slide>
         <div class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0" data-te-carousel-indicators>
           <button type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="0" data-te-carousel-active 
             class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
@@ -172,6 +173,9 @@
           <button  type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="2"
             class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
             aria-label="Slide 3"></button>
+          <button  type="button" data-te-target="#carouselExampleCaptions" data-te-slide-to="3"
+          class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+          aria-label="Slide 4"></button>
         </div>
         <div class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
           <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
@@ -207,6 +211,21 @@
               <p> Some representative placeholder content for the third slide. </p>
             </div>
           </div>
+          <div class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+            data-te-carousel-item style="backface-visibility: hidden">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat" style="background-position: 50%">
+              <img src="./assets/image/vecteezy_graphic-designer-concept-vector-flat-illustration-of-a-man_10551162.jpg" class="block w-full" />
+              <div class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-black bg-fixed opacity-50"></div>
+            </div>
+            <div class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+              <h5 class="text-xl">link a paginas en github</h5>
+              <a href="https://github.com/GlendaSethNefer" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--github-->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
           <button  class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
           type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
           <span class="inline-block h-8 w-8">
@@ -229,7 +248,6 @@
       </div>
     </div>
   </section> 
-  <!-- Fin de portafolio -->
   <!-- Formulario de correo -->
   <div class="container mt-24 mx-auto md:px-6">
     <section class="mb-24 bg-verdeaqua-500 text-center dark:bg-neutral-900 lg:text-left">
@@ -330,20 +348,22 @@
               </div>
             </form>
           </div>
-          <!--  fin Section: Design Block -->
+          <!--  End Section: Design Block -->
         </div>
       </div>
+      <p id="servicios"></p>
     </section>
   </div>
-  <!-- fin Formulario de correo -->
+  <!-- Servicios -->  
   <section class="container ml-auto mr-auto flex flex-wrap items-start mt-8">
     <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
-      <h1 class="text-3xl font-playfair font-extrabold text-center">Podemos ayudarte!!!</h1>
+      <h1 class="text-3xl font-playfair font-extrabold text-center">Estos son nuestros servicios</h1>
+      <p class="text-center">Podemos ayudarte!!!</p>
     </div>
     <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
       <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
         <figure class="mb-2">
-          <img src="assets/img/s1.png" alt="" class="h-64 ml-auto mr-auto" />
+          <img src="./assets/img/s1.png" alt="" class="h-64 ml-auto mr-auto" />
         </figure>
         <div class="rounded-lg p-4 flex flex-col">
           <div>
@@ -366,17 +386,17 @@
     <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
       <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
         <figure class="mb-2">
-          <img src="assets/img/s2.png" alt="" class="h-64 ml-auto mr-auto" />
+          <img src="./assets/img/s2.png" alt="" class="h-64 ml-auto mr-auto" />
         </figure>
         <div class="rounded-lg p-4 flex flex-col">
           <div>
             <h5 class="text-2xl font-bold leading-none text-center"> Desarrollo Web </h5>
-            <p class="mt-4"> Diseño web personalizado
-              Diseño Interfaz UX / UI
-              Diseño web responsive
-              Redacción de contenidos web
-              Auditoría rendimiento web
-              Web para comercio electrónico
+            <p class="mt-4"> Diseño web personalizado <br/>
+              Diseño Interfaz UX / UI <br/>
+              Diseño web responsive <br/>
+              Redacción de contenidos web <br/>
+              Auditoría rendimiento web <br/>
+              Web para comercio electrónico <br/>
           </div>
           <div class="flex items-center mt-4">
             <a href="#" class="font-bold text-orange-900">Leer más</a>
@@ -420,12 +440,13 @@
         <div class="rounded-lg p-4 flex flex-col">
           <div>
             <h5 class="text-2xl font-bold leading-none text-center"> Marqueting Digital </h5>
-            <p class="mt-4"> Posicionamiento SEO/SEM
-              Gestión de redes sociales
-              Creación de contenido
-              Gestión de comunicación digital
-              Campañas digitales
-              E-mail Marketing </p>
+            <p class="mt-4"> Posicionamiento SEO/SEM <br/>
+              Gestión de redes sociales <br/>
+              Creación de contenido <br/>
+              Gestión de comunicación digital <br/>
+              Campañas digitales <br/>
+              E-mail Marketing <br/>
+            </p>
           </div>
           <div class="flex items-center mt-4">
             <a href="#" class="font-bold text-orange-900">Leer más</a>
@@ -496,157 +517,163 @@
       </div>
     </div>
   </section>
-  <div class=" w-full h-20 text-center">aqui va algo</div>
+  <div class="w-fit h-20 text-center">
+    <p class="text-xl font-extrabold font-gentium">
+      tener en cuenta que todas las imgenes e iconos deben estar local,
+      <br/>al menos mientras la pagina esta en proceso de elaboracion.
+    </p>
+  </div>
   </header>
  <!-- Footer container -->
- <footer class="bg-[#304058] text-[#f8f9fa] text-center lg:text-left">
-  <!-- Social network icons container -->
-  <div class="flex items-center justify-center border-b-2 border-[#131e2e] p-6 lg:justify-between">       
-    <div class="mx-12 hidden lg:block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <div class="grid md:flex justify-center grid-cols-5 gap-y-2">
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Behance -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
-          <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Facebook -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
-          <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Messenger -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewbox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
-          <path d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Whatsapp -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--telegram-->
-        <svg class="h-4 w-4" fill="white" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            xml:space="preserve" xmlns:serif="http://www.serif.com/"  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-          <path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--google-->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white"  viewBox="0 0 24 24">
-          <path d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
-            fill-rule="evenodd"  clip-rule="evenodd" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--instagram-->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
-          <path  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--linkedin-->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
-          <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-        </svg>
-      </a>
-      <a href="https://github.com/GlendaSethNefer" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--github-->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white"  viewBox="0 0 24 24">
-          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-        </svg>
-      </a>
-      <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Dribbble -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
-          <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z" />
-        </svg>
-      </a>
-    </div>
-  </div>
-  <div class="mx-6 py-10 text-center md:text-left">
-    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-      <!-- Speak Section-->
-      <div>
-        <h6 class="mb-4 flex items-center justify-center font-semibold font-playfair uppercase md:justify-start">
-          <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
-          <a href="index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">
-            Glenda Castro <br/> Darien Jerez</a>
-        </h6>
-        <p>
-          Nosotros podemos ayudarte a crear una experiencia digital atractiva y 
-          única para que tu negocio conecte con las personas.
-        </p>
+  <footer class="bg-[#304058] text-[#f8f9fa] text-center lg:text-left">
+    <!-- Social network icons container -->
+    <div class="flex items-center justify-center border-b-2 border-[#131e2e] p-6 lg:justify-between">       
+      <div class="mx-12 hidden lg:block">
+        <span>Get connected with us on social networks:</span>
       </div>
-      <!--Card Section-->
-      <div class="pl-12">
-        <div class="overflow-hidden relative h-20 w-60 mb-3 max-w-sm bg-azulvioleta shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
-          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar.jpg">
-          <div class="flex flex-col py-5 pl-24">
-            <strong class=" text-sm font-medium dark:text-slate-200">Glenda Castro R</strong>
-            <span class="text-slate-200 text-sm font-medium dark:text-slate-400">Web Developer</span>
+      <div class="grid md:flex justify-center grid-cols-5 gap-y-2">
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Behance -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+            <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Facebook -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Messenger -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewbox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd">
+            <path d="M12 0c-6.627 0-12 4.975-12 11.111 0 3.497 1.745 6.616 4.472 8.652v4.237l4.086-2.242c1.09.301 2.246.464 3.442.464 6.627 0 12-4.974 12-11.111 0-6.136-5.373-11.111-12-11.111zm1.193 14.963l-3.056-3.259-5.963 3.259 6.559-6.963 3.13 3.259 5.889-3.259-6.559 6.963z" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Whatsapp -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--telegram-->
+          <svg class="h-4 w-4" fill="white" viewbox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xml:space="preserve" xmlns:serif="http://www.serif.com/"  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+            <path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--google-->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="white"  viewBox="0 0 24 24">
+            <path d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
+              fill-rule="evenodd"  clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--instagram-->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+            <path  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--linkedin-->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+          </svg>
+        </a>
+        <a href="https://github.com/GlendaSethNefer" class="mr-6 text-neutral-600 dark:text-neutral-200"><!--github-->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white"  viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="#!" class="mr-6 text-neutral-600 dark:text-neutral-200"><!-- Dribbble -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="white" viewBox="0 0 24 24">
+            <path d="M12 0c-6.628 0-12 5.373-12 12s5.372 12 12 12 12-5.373 12-12-5.372-12-12-12zm9.885 11.441c-2.575-.422-4.943-.445-7.103-.073-.244-.563-.497-1.125-.767-1.68 2.31-1 4.165-2.358 5.548-4.082 1.35 1.594 2.197 3.619 2.322 5.835zm-3.842-7.282c-1.205 1.554-2.868 2.783-4.986 3.68-1.016-1.861-2.178-3.676-3.488-5.438.779-.197 1.591-.314 2.431-.314 2.275 0 4.368.779 6.043 2.072zm-10.516-.993c1.331 1.742 2.511 3.538 3.537 5.381-2.43.715-5.331 1.082-8.684 1.105.692-2.835 2.601-5.193 5.147-6.486zm-5.44 8.834l.013-.256c3.849-.005 7.169-.448 9.95-1.322.233.475.456.952.67 1.432-3.38 1.057-6.165 3.222-8.337 6.48-1.432-1.719-2.296-3.927-2.296-6.334zm3.829 7.81c1.969-3.088 4.482-5.098 7.598-6.027.928 2.42 1.609 4.91 2.043 7.46-3.349 1.291-6.953.666-9.641-1.433zm11.586.43c-.438-2.353-1.08-4.653-1.92-6.897 1.876-.265 3.94-.196 6.199.196-.437 2.786-2.028 5.192-4.279 6.701z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="mx-6 py-10 text-center md:text-left">
+      <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Speak Section-->
+        <div>
+          <h6 class="mb-4 flex items-center justify-center font-semibold font-playfair uppercase md:justify-start">
+            <img src="./assets/image/logo temporal.jpg" class="fill-current rounded-full max-sm:w-8" width="54" height="54" viewBox="0 0 54 54"/>
+            <a href="index.html" class="visible font-extrabold text-xl tracking-tight pl-4 max-sm:hidden">
+              Glenda Castro <br/> Darien Jerez</a>
+          </h6>
+          <p>
+            Nosotros podemos ayudarte a crear una experiencia digital atractiva y 
+            única para que tu negocio conecte con las personas.
+          </p>
+        </div>
+        <!--Card Section-->
+        <div class="pl-12">
+          <div class="overflow-hidden relative h-20 w-60 mb-3 max-w-sm bg-azulvioleta shadow-lg rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+            <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar.jpg">
+            <div class="flex flex-col py-5 pl-24">
+              <strong class=" text-sm font-medium dark:text-slate-200">Glenda Castro R</strong>
+              <span class="text-slate-200 text-sm font-medium dark:text-slate-400">Web Developer</span>
+            </div>
+          </div>
+          <div class="overflow-hidden relative h-20 w-60 max-w-sm bg-white shadow-lg rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
+            <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar dari.jpg">
+            <div class="flex flex-col py-5 pl-24">
+              <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Darien Jerez R</strong>
+              <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Graphic Designer</span>
+            </div>
           </div>
         </div>
-        <div class="overflow-hidden relative h-20 w-60 max-w-sm bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-slate-800 dark:highlight-white/5">
-          <img class="absolute -left-6 w-24 h-24 rounded-full shadow-lg" src="./assets/image/avatar dari.jpg">
-          <div class="flex flex-col py-5 pl-24">
-            <strong class="text-slate-900 text-sm font-medium dark:text-slate-200">Darien Jerez R</strong>
-            <span class="text-slate-500 text-sm font-medium dark:text-slate-400">Graphic Designer</span>
-          </div>
+        <!-- Products section -->
+        <div class="md:pl-16">
+          <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            Products</h6>
+          <p class="mb-4 link link-hover"><a href="#!" class="">Diseño web</a></p>
+          <p class="mb-4"><a href="#!" class="">Desarrollo Web</a></p>
+          <p class="mb-4"><a href="#!" class="">Animaciones</a></p>
+          <p class=""><a href="#!" class="">Conseguir proyectos</a></p>
+        </div>
+        <!-- Contact section -->
+        <div>
+          <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">Contacto</h6>
+          <p class="mb-4 flex items-center justify-center md:justify-start">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
+              <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+              <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+            </svg>
+            Ciudad Habana, CH 10400, Cuba
+          </p>
+          <p class="mb-4 flex items-center justify-center md:justify-start">
+            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
+              <path  d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+              <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>
+            corporativo@gmail.com
+          </p>
+          <p class="mb-4 flex items-center justify-center md:justify-start">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor" class="mr-3 h-5 w-5">
+              <path fill-rule="evenodd"
+                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                clip-rule="evenodd" />
+            </svg>
+            + 01 234 567 88
+          </p>
+          <p class="flex items-center justify-center md:justify-start">
+            <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor" class="mr-3 h-5 w-5">
+              <path fill-rule="evenodd"
+                d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+                clip-rule="evenodd" />
+            </svg>
+            + 01 234 567 89
+          </p>
         </div>
       </div>
-      <!-- Products section -->
-      <div class="md:pl-16">
-        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-          Products</h6>
-        <p class="mb-4 link link-hover"><a href="#!" class="">Diseño web</a></p>
-        <p class="mb-4"><a href="#!" class="">Desarrollo Web</a></p>
-        <p class="mb-4"><a href="#!" class="">Animaciones</a></p>
-        <p class=""><a href="#!" class="">Conseguir proyectos</a></p>
-      </div>
-      <!-- Contact section -->
-      <div>
-        <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">Contacto</h6>
-        <p class="mb-4 flex items-center justify-center md:justify-start">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
-            <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
-            <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
-          </svg>
-          Ciudad Habana, CH 10400, Cuba
-        </p>
-        <p class="mb-4 flex items-center justify-center md:justify-start">
-          <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-3 h-5 w-5">
-            <path  d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-          </svg>
-          corporativo@gmail.com
-        </p>
-        <p class="mb-4 flex items-center justify-center md:justify-start">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor" class="mr-3 h-5 w-5">
-            <path fill-rule="evenodd"
-              d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
-              clip-rule="evenodd" />
-          </svg>
-          + 01 234 567 88
-        </p>
-        <p class="flex items-center justify-center md:justify-start">
-          <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="currentColor" class="mr-3 h-5 w-5">
-            <path fill-rule="evenodd"
-              d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
-              clip-rule="evenodd" />
-          </svg>
-          + 01 234 567 89
-        </p>
-      </div>
     </div>
-  </div>
-  <!--Copyright section-->
-  <div class="bg-[#131e2e] text-white p-6 text-center">
-    <span> 
-      © <script>document.write(new Date().getFullYear())</script> <!-- este script mantiene el ano actualizado -->
-      Todos los derechos reservados:
-    </span>
-    <a href="index.html" class="font-semibold">
-       LUCA-GD
-    </a>
-  </div>
-</footer>
+    <!--Copyright section-->
+    <div class="bg-[#131e2e] text-white p-6 text-center">
+      <span> 
+        © <script>document.write(new Date().getFullYear())</script> <!-- este script mantiene el ano actualizado -->
+        Todos los derechos reservados:
+      </span>
+      <a href="index.html" class="font-semibold">
+        LUCA-GD
+      </a>
+    </div>
+  </footer>
+
 <script
   type="text/javascript"
   src="./node_modules/tw-elements/dist/js/tw-elements.umd.min.js">  
